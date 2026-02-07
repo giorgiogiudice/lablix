@@ -169,6 +169,10 @@ const TRANSLATIONS = {
         startNow: {
             en: 'START NOW',
             it: 'INIZIA ORA'
+        },
+        creditsLabel: {
+            en: 'Ideator & Creator',
+            it: 'Ideatore & Creatore'
         }
     }
 };
