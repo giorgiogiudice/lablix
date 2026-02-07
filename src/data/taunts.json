@@ -1,0 +1,261 @@
+{
+    "edge_proximity": {
+        "en": [
+            "You're one twitch away from total failure, you absolute clown!",
+            "Teetering like the useless lump you are—FALL ALREADY!",
+            "So close to the edge... just like your grip on competence!",
+            "I can practically hear your pathetic little heart racing!",
+            "The void is begging for you, you trembling waste of space!",
+            "Sweaty palms yet? That's the taste of inevitable defeat!",
+            "Come on, lean in—just a little more, you hopeless disaster!",
+            "Edge of glory? More like edge of your worthless existence!",
+            "One. Tiny. Slip. And you're gone forever. DO IT!",
+            "Watching you wobble is the only joy I get from your garbage play!",
+            "PLUMMET ALREADY, YOU SPINELESS WORM!",
+            "The abyss is hungry, and you're the perfect snack—FAIL!"
+        ],
+        "it": [
+            "Sei un fallimento totale. Pagliaccio!",
+            "Barcolli come il nulla che sei. CADI CHE RISPARMIAMO TEMPO!",
+            "Un altro millimetro e finisci nel dimenticatoio, fenomeno da baraccone!",
+            "Così vicino al bordo... una metafora sulla tua vita!",
+            "Sento quasi il tuo patetico cuoricino accelerare!",
+            "Il vuoto ti sta chiamando per nome, rispondigli, codardo!",
+            "Il vuoto ti implora, sei uno spreco di ossigeno!",
+            "Dai, sporgiti un po' di più, tanto sei già un fallito!",
+            "Palmi sudati? È il sapore della sconfitta inevitabile!",
+            "Dai, sporgiti, solo un altro po', cane senza appello!",
+            "Un piccolo scivolone e addio al peggior giocatore del pianeta!",
+            "Sull'orlo della gloria? Più sull'orlo della tua fine senza senso!",
+            "Ti vedo barcollare come la tua autostima: zero equilibrio!",
+            "Un passetto e sparisci per sempre. Fatti questo favore!",
+            "Guardarti barcollare è l'unica gioia dal tuo gioco schifoso!",
+            "PRECIPITA, AVANTI! VERME SENZA SPINA DORSALE!",
+            "L'abisso ha fame e tu sei lo spuntino perfetto.!"
+        ]
+    },
+    "after_hit": {
+        "en": [
+            "Direct hit, you sluggish sack of failure!",
+            "HAHA! Took that right to the face, didn't you, loser?",
+            "What, you thought standing still was a strategy? Idiot!",
+            "That had to sting—your ego more than anything!",
+            "Dodge? You? Don't make me laugh, you stationary target!",
+            "Too slow, too stupid, too utterly pathetic!",
+            "Those reflexes belong in a museum of failure!",
+            "Bullseye on the world's worst player—congrats, trash!",
+            "You're not even trying to hide how bad you are!",
+            "I've hit stationary objects that moved better than you!",
+            "Lag? No, that's just your complete lack of skill!",
+            "ABSOLUTE DISGRACE—how are you this useless?!"
+        ],
+        "it": [
+            "Colpo diretto, sacco flaccido di fallimento!",
+            "Ahi, quello ha fatto male... alla tua dignità, soprattutto!",
+            "Sei più lento di un bradipo morto!",
+            "HAHA! Te lo sei preso dritto in faccia, vero, perdente?",
+            "Questo avrà fatto più male al tuo ego che ad altro!",
+            "Quello deve aver fatto male più al tuo ego che altro!",
+            "Ho visto statue più mobili di te!",
+            "Centro perfetto sul re dei perdenti, che onore per me!",
+            "Troppo lento, troppo stupido, totalmente patetico!",
+            "I tuoi riflessi meritano un museo del fallimento!",
+            "Centro perfetto sul peggior giocatore del mondo, complimenti... spazzatura!",
+            "Non stai neanche provando a nascondere quanto fai schifo!",
+            "Come fai a essere così inutile?!"
+        ]
+    },
+    "reckless_movement": {
+        "en": [
+            "Whoa, calm down, you reckless imbecile—death is coming!",
+            "Slow down before you embarrass yourself any further!",
+            "Look at you go—straight into utter humiliation!",
+            "Overconfident trash thinking speed beats skill!",
+            "Physics hates you almost as much as I do!",
+            "Keep flailing like that, idiot—it's hilarious!",
+            "Fast, furious, and about to be completely destroyed!",
+            "Your momentum? Just speeding you toward total failure!"
+        ],
+        "it": [
+            "Ehi, calmati, la morte sta arrivando!",
+            "Spericolato? Più che altro suicida con zero stile!",
+            "Corri come se avessi un cervello... ah no, scusa, non ce l'hai!",
+            "Vai forte, eh? Peccato che la competenza non tenga il passo!",
+            "Rallenta prima di imbarazzarti ancora di più!",
+            "Guarda come vai dritto verso l'umiliazione totale!",
+            "Veloce e stupido: combinazione letale per un perdente come te!",
+            "La fisica ti odia quasi quanto me!",
+            "Il tuo slancio è proporzionale alla tua stupidità: immenso!",
+            "Continua a sbracciarti così, idiota, è esilarante!"
+        ]
+    },
+    "general_mockery": {
+        "en": [
+            "Is this your first day being alive? Because you're terrible!",
+            "You MIGHT do better... in another lifetime!",
+            "Keep trying? Nah, just quit while you're hopelessly behind!",
+            "My blind, dead grandma plays better than your garbage!",
+            "You're not just bad—you're an insult to bad players!",
+            "This is excruciating—like watching paint dry on a corpse!",
+            "Trying? Looks more like deliberate self-sabotage!",
+            "Tutorial bots laugh at your pathetic attempts!",
+            "Yawn. Wake me when you stop being a complete joke.",
+            "Just quit—save us all from your disgraceful display!",
+            "This isn't going well? It's going exactly as your skill predicts: disaster!",
+            "I'm barely awake and still destroying your ego!",
+            "HOW are you this catastrophically awful?!",
+            "Delete the game, delete your account, delete yourself!",
+            "Your high score is a war crime against gaming!",
+            "Easier difficulty? There isn't one low enough for you!",
+            "Mobile gaming called—it doesn't want you either!",
+            "UNINSTALL AND NEVER RETURN, YOU HOPELESS DISASTER!"
+        ],
+        "it": [
+            "È il tuo primo giorno da vivo? Perché fai troppo schifo!",
+            "Ma tu hai mai vinto qualcosa in vita tua o solo perso?",
+            "Giochi come se le dita fossero incollate col bostik!",
+            "POTRESTI fare meglio... forse in un'altra vita!",
+            "Il tuo livello è così basso che serve un sottomarino per trovarlo!",
+            "Mia zia con l'artrite ti umilierebbe senza fatica!",
+            "Continua a provare? No, molla finché sei irrimediabilmente indietro!",
+            "Guardarti giocare è una tortura peggiore dell'inferno!",
+            "Mia nonna cieca e morta gioca meglio di te!",
+            "Non sei solo scarso, sei un insulto ai giocatori scarsi!",
+            "Ci provi almeno o è solo masochismo puro?",
+            "Spiegami una cosa, sei scarso o ti stai sabotando da solo?",
+            "Molla, tanto sei nato per perdere, non forzare la natura!",
+            "Per favore mi svegli quando smetti di essere una barzelletta totale?",
+            "Molla—risparmiaci tutti dalla tua esibizione vergognosa!",
+            "Sei un insulto all'evoluzione umana!",
+            "Cancella l'app e vai a zappare la terra, almeno lì servi!",
+            "Non sta andando bene? Tranquillo, le mie aspettative sono molto più basse!",
+            "Hai fatto un corso per imparare a fare così schifo?",
+            "Difficoltà facile? Per te servirebbe 'modalità vegetale'!",
+            "Cancella il gioco, cancella l'account, cancella te stesso!",
+            "Il tuo record è un crimine di guerra contro il gaming!",
+            "Difficoltà più facile? Non ne esiste una abbastanza bassa per te!",
+            "FATTI UNA CORTESIA: DISINSTALLA E NON TORNARE MAI PIÙ!"
+        ]
+    },
+    "near_death": {
+        "en": [
+            "One more hit and you're finished, you fragile joke!",
+            "Just surrender already—spare me the pathetic struggle!",
+            "Watching you cling to life is honestly embarrassing!",
+            "You're done. Accept your utter worthlessness.",
+            "Last life? You'll waste it like everything else!",
+            "Victory tastes so sweet—your tears will make it sweeter!",
+            "Defeat is inevitable, you delusional failure!",
+            "Survival? That's a word real players use!"
+        ],
+        "it": [
+            "Un altro colpo e sei storia, relitto umano!",
+            "Arrenditi dai! Risparmiaci questo spettacolo patetico!",
+            "Arrenditi, tanto sei già morto dentro!",
+            "Guardarti aggrappato alla vita, è sinceramente imbarazzante!",
+            "Hai finito? Accetta la tua totale inutilità e torna a casa.",
+            "La sconfitta ti sta bene, indossala con orgoglio!",
+            "Ultima vita? La sprecherai come hai fatto per tutta la tua esistenza!",
+            "Sopravvivere non è roba per fenomeni come te!",
+            "La tua ultima vita ti costerà il prezzo di un funerale!",
+            "La vittoria è così dolce, le tue lacrime la renderanno ancora più dolce!"
+        ]
+    },
+    "final_death": {
+        "en": [
+            "GAME OVER! You're irredeemable trash!",
+            "Dead. Pathetic. Expected. Next loser, please!",
+            "I KNEW you were too incompetent to win!",
+            "Thanks for the laughs, you monumental failure!",
+            "Better luck next time? No, there won't be one for you!",
+            "Victory is mine—you never even belonged here!",
+            "You had zero chance from the start, idiot!",
+            "Wow. That was the most embarrassing death I've ever seen."
+        ],
+        "it": [
+            "Riposa in pace, bollito!",
+            "Il mondo ringrazia per la tua dipartita!",            "Anche questa è andata. Prossimo perdente, prego!",
+            "SAPEVO che eri troppo incompetente per vincere!",
+            "Morto e sepolto, esattamente come il tuo talento!",
+            "Lo sapevo: eri troppo scarso per farcela!",
+            "Grazie per avermi fatto ridere",
+            "Grazie per le risate, fallimento monumentale!",
+            "Buona fortuna la prossima volta? Avrai bisogno di un miracolo!",
+            "Dai... avanti che ci avevi creduto.",
+            "La morte più ridicola che abbia mai visto, complimenti!"
+        ]
+    },
+    "fall_off_edge": {
+        "en": [
+            "SPLAT! You absolute moron!",
+            "Down you go—good riddance, trash!",
+            "Gravity finally did us all a favor!",
+            "Farewell, you clumsy waste of code!",
+            "Butterfingers? More like butter-brain!",
+            "Careless idiot gets exactly what he deserves!",
+            "Enjoy the endless fall, you worthless player!",
+            "Didn't even need to hit you—you failed yourself!"
+        ],
+        "it": [
+            "SPLASH! Che botta!",
+            "Addio, disastro con le gambe!",
+            "La gravità ci ha finalmente fatto un favore!",
+            "Caduto come la tua autostima: di botto!",
+            "Addio, spreco di ossigeno!",
+            "Mani di burro? Il cervello sarà olio d'oliva!",
+            "Idiota disattento ottiene esattamente ciò che merita!",
+            "Goditi il viaggio verso l'oblio, perdente!",
+            "Non ho neanche dovuto mirare: hai fatto tutto tu!"
+        ]
+    },
+    "difficulty_increase": {
+        "2": {
+            "en": [
+                "Survived easy mode? Time to watch you crumble!",
+                "Thought that was hard? You're about to cry!",
+                "Turning up the heat—prepare for humiliation!",
+                "Medium difficulty for the eternally mediocre—you!"
+            ],
+            "it": [
+                "Sopravvissuto alla modalità facile? Sei più intelligente di un macaco!",
+                "Pensavi fosse difficile? Ora piangerai!",
+                "Si alza il livello, preparati all'umiliazione!",
+                "Difficoltà media per giocatori mediocri!"
+            ]
+        },
+        "3": {
+            "en": [
+                "Hard mode! Your suffering begins now!",
+                "Still alive? That changes in 3... 2... 1...",
+                "Real game starts—real players only, sorry!",
+                "Your survival was cute while it lasted!"
+            ],
+            "it": [
+                "Modalità difficile! Adesso mi alzo dalla sedia!",
+                "Modalità difficile: qui muoiono i deboli come te!",
+                "Ancora vivo? Errore temporaneo, correggo subito!",
+                "Ancora vivo? Cambierà in 3... 2... 1...",
+                "Il vero gioco inizia, i perdenti escono di scena!",
+                "La tua agonia diventa seria, che goduria!",
+                "La tua sopravvivenza era carina finché è durata!"
+            ]
+        },
+        "4": {
+            "en": [
+                "BRUTAL MODE—your nightmare just got real!",
+                "Maximum pain incoming—pray for a quick death!",
+                "No mercy, no hope, just your inevitable doom!",
+                "You made it here? Impressive... said no one ever!"
+            ],
+            "it": [
+                "MODALITÀ BRUTALE, ora mammina ti fa male!",
+                "BRUTALE! Sei già morto, solo non lo sai ancora!",
+                "Massima difficoltà: prega, tanto non serve!",
+                "Dolore massimo in arrivo. Prega per una morte veloce!",
+                "Nessuna pietà, nessuna speranza, il riassunto della tua vita!",
+                "Niente pietà per gli scarsetti come te!",
+                "Sei arrivato qui? Che persona incredibile... ha detto nessuno mai!"
+            ]
+        }
+    }
+}

@@ -1,0 +1,23 @@
+# Claude Code settings (contains credentials)
+.claude/
+
+# Old dist folder (build outputs to root now)
+dist/
+
+# Node modules
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*

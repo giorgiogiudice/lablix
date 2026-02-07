@@ -1,0 +1,11 @@
+{
+  "name": "lablix",
+  "version": "1.0.0",
+  "description": "Mobile tilt-controlled survival game",
+  "scripts": {
+    "build": "node build.js",
+    "watch": "node build.js --watch",
+    "dev": "node build.js --watch"
+  },
+  "devDependencies": {}
+}

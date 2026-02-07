@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="screen-orientation" content="portrait">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Lablix</title>
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <link rel="apple-touch-icon" href="img/logo.png">
+    <link rel="stylesheet" href="css/styles.1770425864355.css" id="main-css">
+</head>
+<body>
+    <!-- Mobile Only Message -->
+    <div id="desktop-message" class="screen hidden">
+        <div class="message-container">
+            <h1>LABLIX</h1>
+            <div class="icon">📱</div>
+            <p data-i18n="ui.mobileOnly">This game requires a mobile device with gyroscope.</p>
+        </div>
+    </div>
+
+    <!-- Start Screen -->
+    <div id="start-screen" class="screen hidden">
+        <div class="start-container">
+            <h1 class="game-title">LABLIX</h1>
+
+            <!-- Language Selector -->
+            <div id="language-selector">
+                <div class="lang-display" id="lang-display">🇬🇧 English</div>
+                <div class="lang-dropdown" id="lang-dropdown">
+                    <div class="lang-option selected" data-lang="en">🇬🇧 English</div>
+                    <div class="lang-option" data-lang="it">🇮🇹 Italiano</div>
+                </div>
+            </div>
+
+            <p class="tagline" data-i18n-key="tagline">Tilt to survive. Don't fall.</p>
+
+            <div class="game-preview">
+                <div class="preview-box"></div>
+                <div class="preview-platform"></div>
+            </div>
+
+            <div class="instructions">
+                <div class="instruction-item">
+                    <span class="instruction-icon">📱</span>
+                    <span data-i18n-key="instruction1">Tilt your phone to move</span>
+                </div>
+                <div class="instruction-item">
+                    <span class="instruction-icon">⚠️</span>
+                    <span data-i18n-key="instruction2">Don't fall off the edge</span>
+                </div>
+                <div class="instruction-item">
+                    <span class="instruction-icon">🪙</span>
+                    <span data-i18n-key="instruction3">Collect coins to score</span>
+                </div>
+            </div>
+
+            <button id="start-button" class="btn-primary" data-i18n="ui.play">PLAY</button>
+            <p class="high-score"><span data-i18n="ui.highScore">High Score</span>: <span id="high-score">0</span></p>
+            <p class="credits">Ideator &amp; Creator <a href="https://giorgiogiudice.com" target="_blank" rel="noopener">Giorgio Giudice</a></p>
+        </div>
+    </div>
+
+    <!-- Calibration Screen -->
+    <div id="calibration-screen" class="screen hidden">
+        <div class="calibration-container">
+            <h2 id="calibration-title" data-i18n="ui.holdFlat">HOLD FLAT</h2>
+            <div class="phone-illustration">
+                <div class="phone-icon" id="phone-icon">📱</div>
+            </div>
+            <div id="calibration-guide" class="calibration-guide">
+                <p id="calibration-msg" class="calibration-instruction" data-i18n="ui.calibrationMsgTilt">Place your phone on a flat surface or hold it level</p>
+                <div id="tilt-indicator" class="tilt-indicator">
+                    <div class="tilt-bar">
+                        <div id="tilt-dot" class="tilt-dot"></div>
+                    </div>
+                </div>
+                <p id="tilt-hint" class="tilt-hint" data-i18n="ui.calibrationHintTilt">Tilt gently until the dot is centered</p>
+            </div>
+
+            <div id="gyro-status" class="gyro-status">
+                <span id="gyro-check" data-i18n="ui.gyroWaiting">Waiting for gyroscope...</span>
+            </div>
+
+            <button id="calibrate-button" class="btn-primary calibrate-hidden" data-i18n="ui.startNow">START NOW</button>
+            <div id="calibration-status" class="calibration-status hidden">
+                <div class="spinner"></div>
+                <span data-i18n="ui.calibrating">Calibrating...</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Container -->
+    <div id="game-container" class="hidden">
+        <div id="hud">
+            <div id="score-display">
+                <span class="label" data-i18n="ui.score">SCORE</span>
+                <span id="score">0</span>
+            </div>
+            <div id="lives-display">
+                <span id="lives">
+                    <span class="heart">&#9829;</span>
+                    <span class="heart">&#9829;</span>
+                    <span class="heart">&#9829;</span>
+                    <span class="heart">&#9829;</span>
+                    <span class="heart">&#9829;</span>
+                </span>
+                <button id="exit-button" data-i18n="ui.exit">EXIT</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Clean up URL if loaded via old cached redirect
+        if (location.pathname.indexOf('game.html') !== -1) {
+            history.replaceState(null, '', location.pathname.replace(/game\.html$/, ''));
+        }
+        // Background music — start on first interaction (mobile requires gesture)
+        var _bgm = new Audio('audio/music/background.mp3');
+        _bgm.loop = true;
+        _bgm.volume = 0.08;
+        _bgm.play().catch(function() {
+            document.addEventListener('click', function _startBgm() {
+                _bgm.play().catch(function(){});
+                document.removeEventListener('click', _startBgm);
+            }, { once: true });
+        });
+        // Pause music when page is hidden (tab switch, screen off, navigation)
+        document.addEventListener('visibilitychange', function() {
+            if (document.visibilityState === 'hidden') {
+                _bgm.pause();
+            } else {
+                _bgm.play().catch(function(){});
+            }
+        });
+        // Pause music when navigating away
+        window.addEventListener('pagehide', function() {
+            _bgm.pause();
+        });
+    </script>
+    <script src="https://unpkg.com/three@0.150.0/build/three.min.js"></script>
+    <script src="js/game.1770425864355.js"></script>
+</body>
+</html>
