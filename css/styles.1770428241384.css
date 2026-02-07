@@ -200,6 +200,25 @@ html, body {
     box-shadow: 0 2px 15px rgba(74, 222, 128, 0.3);
 }
 
+.btn-secondary {
+    background: transparent;
+    color: #888;
+    border: 1px solid #444;
+    padding: 10px 30px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.btn-secondary:active {
+    color: #fff;
+    border-color: #888;
+}
+
 .high-score {
     margin-top: 30px;
     color: #666;

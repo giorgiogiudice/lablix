@@ -40,10 +40,14 @@ function init() {
 
     document.getElementById('start-button').addEventListener('click', onStartClick);
     document.getElementById('calibrate-button').addEventListener('click', onCalibrateClick);
+    document.getElementById('calibration-exit-button').addEventListener('click', onCalibrationExitClick);
     document.getElementById('exit-button').addEventListener('click', onExitClick);
 }
 
 async function onStartClick() {
+    // Start background music on first play (user gesture context)
+    if (typeof _startBgm === 'function') _startBgm();
+
     const hasPermission = await requestGyroPermission();
     if (!hasPermission) {
         const msg = typeof getText === 'function' ? getText('ui', 'gyroPermission') : 'Gyroscope permission is required to play.';
@@ -58,7 +62,32 @@ async function onStartClick() {
     showScreen('calibration');
 }
 
+function onCalibrationExitClick() {
+    exitFullscreen();
+    unlockOrientation();
+    window.removeEventListener('deviceorientation', onDeviceOrientation);
+    if (typeof _bgm !== 'undefined') _bgm.pause();
+
+    // Reset calibration UI state
+    document.getElementById('calibrate-button').classList.remove('calibrate-visible');
+    document.getElementById('calibrate-button').classList.add('calibrate-hidden');
+    var guide = document.getElementById('calibration-guide');
+    if (guide) guide.classList.remove('hidden');
+    document.getElementById('calibration-status').classList.add('hidden');
+    var screen = document.getElementById('calibration-screen');
+    if (screen) screen.classList.remove('level-ok');
+
+    showScreen('start');
+}
+
 function onCalibrateClick() {
+    // Re-enter fullscreen + lock (user may have exited during calibration)
+    enterFullscreen();
+    lockOrientation();
+
+    // Resume music if it was paused
+    if (typeof _startBgm === 'function') _startBgm();
+
     document.getElementById('calibrate-button').classList.add('hidden');
     document.getElementById('calibrate-button').classList.remove('calibrate-visible');
     document.getElementById('calibration-guide').classList.add('hidden');
@@ -80,7 +109,8 @@ function onExitClick() {
     exitFullscreen();
     unlockOrientation();
 
-    // Stop any ongoing speech
+    // Stop music and speech
+    if (typeof _bgm !== 'undefined') _bgm.pause();
     if (typeof stopSpeech === 'function') stopSpeech();
 
     window.removeEventListener('deviceorientation', onDeviceOrientation);
@@ -139,12 +169,22 @@ function startGame() {
 
     requestWakeLock();
 
-    // Only add visibility listener once
+    // Only add global listeners once
     if (!visibilityListenerAdded) {
         visibilityListenerAdded = true;
         document.addEventListener('visibilitychange', () => {
             if (document.visibilityState === 'visible' && gameState.isPlaying) {
                 requestWakeLock();
+            }
+        });
+
+        // Re-enter fullscreen on tap if user exited it during gameplay/calibration
+        document.addEventListener('click', () => {
+            if (gameState.currentScreen === 'game' || gameState.currentScreen === 'calibration') {
+                if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+                    enterFullscreen();
+                    lockOrientation();
+                }
             }
         });
     }
@@ -178,6 +218,9 @@ function resetGameState() {
 }
 
 function restartGame() {
+    // Resume background music
+    if (typeof _startBgm === 'function') _startBgm();
+
     // Reset game state
     gameState.isFalling = false;
     gameState.fallVelocity = 0;

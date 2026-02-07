@@ -76,6 +76,10 @@ const TRANSLATIONS = {
             en: 'EXIT',
             it: 'ESCI'
         },
+        back: {
+            en: 'BACK',
+            it: 'INDIETRO'
+        },
         gameOver: {
             en: 'GAME OVER',
             it: 'FINE PARTITA'

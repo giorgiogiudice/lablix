@@ -12,7 +12,7 @@
     <title>Lablix</title>
     <link rel="icon" type="image/png" href="img/logo.png">
     <link rel="apple-touch-icon" href="img/logo.png">
-    <link rel="stylesheet" href="css/styles.1770426790948.css" id="main-css">
+    <link rel="stylesheet" href="css/styles.1770428241384.css" id="main-css">
 </head>
 <body>
     <!-- Mobile Only Message -->
@@ -88,6 +88,7 @@
             </div>
 
             <button id="calibrate-button" class="btn-primary calibrate-hidden" data-i18n="ui.startNow">START NOW</button>
+            <button id="calibration-exit-button" class="btn-secondary" data-i18n="ui.back">BACK</button>
             <div id="calibration-status" class="calibration-status hidden">
                 <div class="spinner"></div>
                 <span data-i18n="ui.calibrating">Calibrating...</span>
@@ -121,30 +122,25 @@
         if (location.pathname.indexOf('game.html') !== -1) {
             history.replaceState(null, '', location.pathname.replace(/game\.html$/, ''));
         }
-        // Background music — start on first interaction (mobile requires gesture)
+        // Background music — only starts on PLAY click, pauses when page hidden
         var _bgm = new Audio('audio/music/background.mp3');
         _bgm.loop = true;
         _bgm.volume = 0.08;
-        _bgm.play().catch(function() {
-            document.addEventListener('click', function _startBgm() {
-                _bgm.play().catch(function(){});
-                document.removeEventListener('click', _startBgm);
-            }, { once: true });
-        });
-        // Pause music when page is hidden (tab switch, screen off, navigation)
+        function _startBgm() {
+            _bgm.play().catch(function(){});
+        }
         document.addEventListener('visibilitychange', function() {
             if (document.visibilityState === 'hidden') {
                 _bgm.pause();
-            } else {
-                _bgm.play().catch(function(){});
+            } else if (typeof gameState !== 'undefined' && (gameState.isPlaying || gameState.currentScreen === 'calibration')) {
+                _startBgm();
             }
         });
-        // Pause music when navigating away
         window.addEventListener('pagehide', function() {
             _bgm.pause();
         });
     </script>
     <script src="https://unpkg.com/three@0.150.0/build/three.min.js"></script>
-    <script src="js/game.1770426790948.js"></script>
+    <script src="js/game.1770428241384.js"></script>
 </body>
 </html>

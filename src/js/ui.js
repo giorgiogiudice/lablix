@@ -55,6 +55,10 @@ function showGameOver(msg) {
 
     document.getElementById('restart-button').onclick = () => {
         overlay.remove();
+        // Start music + fullscreen in same gesture context (before any await)
+        if (typeof _startBgm === 'function') _startBgm();
+        enterFullscreen();
+        lockOrientation();
         restartGame();
     };
 
