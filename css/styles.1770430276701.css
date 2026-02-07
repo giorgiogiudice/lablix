@@ -92,22 +92,23 @@ html, body {
 #start-screen {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: safe center;
     background: linear-gradient(180deg, #0a1628 0%, #1a0a28 100%);
+    overflow-y: auto;
 }
 
 .start-container {
     text-align: center;
-    padding: 30px 20px 60px;
+    padding: 20px 20px 40px;
     width: 100%;
     max-width: 400px;
 }
 
 .game-title {
-    font-size: 56px;
+    font-size: 48px;
     font-weight: 900;
     letter-spacing: 12px;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
     background: linear-gradient(135deg, #4ade80 0%, #22c55e 50%, #16a34a 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -116,18 +117,18 @@ html, body {
 }
 
 .tagline {
-    font-size: 18px;
+    font-size: 16px;
     color: #888;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     font-style: italic;
 }
 
 /* Game Preview Animation */
 .game-preview {
     position: relative;
-    width: 150px;
-    height: 100px;
-    margin: 30px auto;
+    width: 130px;
+    height: 85px;
+    margin: 15px auto;
 }
 
 .preview-platform {
@@ -162,17 +163,17 @@ html, body {
 
 /* Instructions */
 .instructions {
-    margin: 30px 0;
+    margin: 15px 0;
 }
 
 .instruction-item {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
-    padding: 10px 0;
+    gap: 10px;
+    padding: 6px 0;
     color: #ccc;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .instruction-icon {
@@ -184,13 +185,13 @@ html, body {
     background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
     color: #0a1628;
     border: none;
-    padding: 18px 50px;
+    padding: 15px 50px;
     font-size: 20px;
     font-weight: bold;
     letter-spacing: 2px;
     border-radius: 50px;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 10px;
     transition: transform 0.2s, box-shadow 0.2s;
     box-shadow: 0 5px 30px rgba(74, 222, 128, 0.4);
 }
@@ -220,9 +221,9 @@ html, body {
 }
 
 .high-score {
-    margin-top: 30px;
+    margin-top: 15px;
     color: #666;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .high-score span {
@@ -231,9 +232,9 @@ html, body {
 }
 
 .credits {
-    margin-top: 20px;
+    margin-top: 10px;
     color: #555;
-    font-size: 12px;
+    font-size: 11px;
 }
 
 .credits a {
