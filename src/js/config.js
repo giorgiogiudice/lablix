@@ -48,6 +48,7 @@ const gameState = {
 };
 
 let scene, camera, renderer, platformEdges;
+let grassBlades = [];
 let wakeLock = null;
 let tempQuaternion, rotationAxis;
 let startScreen, calibrationScreen, gameContainer;

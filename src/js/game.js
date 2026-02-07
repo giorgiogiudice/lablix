@@ -291,6 +291,9 @@ function animate() {
     // Animate background (shooting stars, aliens, etc.)
     updateBackground();
 
+    // Grass blade sway animation
+    updateGrassBlades();
+
     // Edge pulse animation (always runs for visual continuity)
     const pulse = 0.7 + Math.sin(performance.now() * 0.003) * 0.3;
     platformEdges.forEach(e => e.material.opacity = pulse);

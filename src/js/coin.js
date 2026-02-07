@@ -19,15 +19,19 @@ function createCoin() {
     // Gold material with glow
     const material = new THREE.MeshStandardMaterial({
         color: 0xffd700,
-        metalness: 0.8,
-        roughness: 0.2,
+        metalness: 1.0,
+        roughness: 0.1,
         emissive: 0xffa500,
-        emissiveIntensity: 0.3
+        emissiveIntensity: 0.5
     });
 
     currentCoin = new THREE.Mesh(geometry, material);
     currentCoin.rotation.x = Math.PI / 2;  // Lay flat, facing up
-    currentCoin.castShadow = true;
+
+    // Add glow point light as child of coin
+    const coinGlow = new THREE.PointLight(0xffd700, 1, 3);
+    coinGlow.position.set(0, 0, 0);
+    currentCoin.add(coinGlow);
 
     // Spawn at random safe position
     spawnCoinAtRandomPosition();

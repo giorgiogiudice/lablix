@@ -25,6 +25,7 @@ function initThreeJS() {
 
     createLighting();
     createPlatform();
+    createGrassBlades();
     createStarfield();
     createPlayerBox();
 
@@ -49,57 +50,11 @@ function createLighting() {
 
 function createGrassTexture() {
     var c = document.createElement('canvas');
-    c.width = 512; c.height = 512;
+    c.width = 64; c.height = 64;
     var ctx = c.getContext('2d');
-
-    // Base green
-    ctx.fillStyle = '#2a6e1e';
-    ctx.fillRect(0, 0, 512, 512);
-
-    // Patches of darker/lighter green
-    for (var i = 0; i < 80; i++) {
-        var x = Math.random() * 512;
-        var y = Math.random() * 512;
-        var r = 15 + Math.random() * 40;
-        var g = ctx.createRadialGradient(x, y, 0, x, y, r);
-        var shade = Math.random() > 0.5 ? '#3d8f2e' : '#2e7a20';
-        g.addColorStop(0, shade);
-        g.addColorStop(1, 'transparent');
-        ctx.fillStyle = g;
-        ctx.fillRect(x - r, y - r, r * 2, r * 2);
-    }
-
-    // Grass blades
-    for (var j = 0; j < 600; j++) {
-        var bx = Math.random() * 512;
-        var by = Math.random() * 512;
-        var bl = 4 + Math.random() * 10;
-        var angle = -Math.PI / 2 + (Math.random() - 0.5) * 0.8;
-        ctx.strokeStyle = 'rgba(' +
-            Math.floor(30 + Math.random() * 40) + ',' +
-            Math.floor(90 + Math.random() * 80) + ',' +
-            Math.floor(10 + Math.random() * 30) + ',0.7)';
-        ctx.lineWidth = 1;
-        ctx.beginPath();
-        ctx.moveTo(bx, by);
-        ctx.lineTo(bx + Math.cos(angle) * bl, by + Math.sin(angle) * bl);
-        ctx.stroke();
-    }
-
-    // Small flowers / dots
-    for (var k = 0; k < 20; k++) {
-        var fx = Math.random() * 512;
-        var fy = Math.random() * 512;
-        ctx.fillStyle = ['#f0e68c', '#ffffff', '#dda0dd', '#ffb6c1'][Math.floor(Math.random() * 4)];
-        ctx.beginPath();
-        ctx.arc(fx, fy, 1.5 + Math.random(), 0, Math.PI * 2);
-        ctx.fill();
-    }
-
-    var tex = new THREE.CanvasTexture(c);
-    tex.wrapS = tex.wrapT = THREE.RepeatWrapping;
-    tex.repeat.set(2, 2);
-    return tex;
+    ctx.fillStyle = '#4a9e3e';
+    ctx.fillRect(0, 0, 64, 64);
+    return new THREE.CanvasTexture(c);
 }
 
 function createPlatform() {
@@ -131,6 +86,43 @@ function createPlatform() {
     addEdge(PLATFORM_WIDTH + 0.3, 0.15, 0, -PLATFORM_DEPTH / 2 - 0.075);
     addEdge(0.15, PLATFORM_DEPTH, -PLATFORM_WIDTH / 2 - 0.075, 0);
     addEdge(0.15, PLATFORM_DEPTH, PLATFORM_WIDTH / 2 + 0.075, 0);
+}
+
+// ========== 3D GRASS BLADES ==========
+
+function createGrassBlades() {
+    grassBlades = [];
+    var bladeCount = 200;
+    var bladeGeo = new THREE.PlaneGeometry(0.08, 0.4);
+    // Shift geometry so bottom edge is at origin (pivot from base)
+    bladeGeo.translate(0, 0.2, 0);
+
+    for (var i = 0; i < bladeCount; i++) {
+        var green = 0.25 + Math.random() * 0.35;
+        var mat = new THREE.MeshStandardMaterial({
+            color: new THREE.Color(0.1 + Math.random() * 0.1, green, 0.05 + Math.random() * 0.08),
+            side: THREE.DoubleSide,
+            roughness: 0.8
+        });
+
+        var blade = new THREE.Mesh(bladeGeo, mat);
+        blade.position.set(
+            (Math.random() - 0.5) * (PLATFORM_WIDTH - 0.5),
+            0.01,
+            (Math.random() - 0.5) * (PLATFORM_DEPTH - 0.5)
+        );
+        blade.rotation.y = Math.random() * Math.PI;
+        scene.add(blade);
+        grassBlades.push(blade);
+    }
+}
+
+function updateGrassBlades() {
+    var time = performance.now() * 0.001;
+    for (var i = 0; i < grassBlades.length; i++) {
+        var blade = grassBlades[i];
+        blade.rotation.z = Math.sin(time * 1.5 + blade.position.x * 2 + blade.position.z * 2) * 0.15;
+    }
 }
 
 // ========== STARFIELD ==========

@@ -1,4 +1,4 @@
-/* Lablix 1770430276701 */
+/* Lablix 1770431130561 */
 
 // ========== taunts.json (auto-embedded) ==========
 const TAUNTS_DATA = {
@@ -261,7 +261,7 @@ const TAUNTS_DATA = {
         }
     }
 };
-const TAUNTS_AUDIO = {"Sei un fallimento totale. Pagliaccio!":"audio/taunts/it/edge_proximity_00.mp3?v=1770430276701","Barcolli come il nulla che sei. CADI CHE RISPARMIAMO TEMPO!":"audio/taunts/it/edge_proximity_01.mp3?v=1770430276701","Un altro millimetro e finisci nel dimenticatoio, fenomeno da baraccone!":"audio/taunts/it/edge_proximity_02.mp3?v=1770430276701","Così vicino al bordo... una metafora sulla tua vita!":"audio/taunts/it/edge_proximity_03.mp3?v=1770430276701","Sento quasi il tuo patetico cuoricino accelerare!":"audio/taunts/it/edge_proximity_04.mp3?v=1770430276701","Il vuoto ti sta chiamando per nome, rispondigli, codardo!":"audio/taunts/it/edge_proximity_05.mp3?v=1770430276701","Il vuoto ti implora, sei uno spreco di ossigeno!":"audio/taunts/it/edge_proximity_06.mp3?v=1770430276701","Dai, sporgiti un po' di più, tanto sei già un fallito!":"audio/taunts/it/edge_proximity_07.mp3?v=1770430276701","Palmi sudati? È il sapore della sconfitta inevitabile!":"audio/taunts/it/edge_proximity_08.mp3?v=1770430276701","Dai, sporgiti, solo un altro po', cane senza appello!":"audio/taunts/it/edge_proximity_09.mp3?v=1770430276701","Un piccolo scivolone e addio al peggior giocatore del pianeta!":"audio/taunts/it/edge_proximity_10.mp3?v=1770430276701","Sull'orlo della gloria? Più sull'orlo della tua fine senza senso!":"audio/taunts/it/edge_proximity_11.mp3?v=1770430276701","Ti vedo barcollare come la tua autostima: zero equilibrio!":"audio/taunts/it/edge_proximity_12.mp3?v=1770430276701","Un passetto e sparisci per sempre. Fatti questo favore!":"audio/taunts/it/edge_proximity_13.mp3?v=1770430276701","Guardarti barcollare è l'unica gioia dal tuo gioco schifoso!":"audio/taunts/it/edge_proximity_14.mp3?v=1770430276701","Precipita! Verme senza spina dorsale!":"audio/taunts/it/edge_proximity_15.mp3?v=1770430276701","L'abisso ha fame e tu sei lo spuntino perfetto.!":"audio/taunts/it/edge_proximity_16.mp3?v=1770430276701","Colpo diretto, sacco flaccido di fallimento!":"audio/taunts/it/after_hit_00.mp3?v=1770430276701","Ahi, quello ha fatto male... alla tua dignità, soprattutto!":"audio/taunts/it/after_hit_01.mp3?v=1770430276701","Sei più lento di un bradipo morto!":"audio/taunts/it/after_hit_02.mp3?v=1770430276701","HAHA! Te lo sei preso dritto in faccia, vero, perdente?":"audio/taunts/it/after_hit_03.mp3?v=1770430276701","Questo avrà fatto più male al tuo ego che ad altro!":"audio/taunts/it/after_hit_04.mp3?v=1770430276701","Ho visto statue più mobili di te!":"audio/taunts/it/after_hit_05.mp3?v=1770430276701","Centro perfetto sul re dei perdenti, che onore per me!":"audio/taunts/it/after_hit_06.mp3?v=1770430276701","Troppo lento, troppo stupido, totalmente patetico!":"audio/taunts/it/after_hit_07.mp3?v=1770430276701","I tuoi riflessi meritano un museo del fallimento!":"audio/taunts/it/after_hit_08.mp3?v=1770430276701","Centro perfetto sul peggior giocatore del mondo, complimenti... spazzatura!":"audio/taunts/it/after_hit_09.mp3?v=1770430276701","Non stai neanche provando a nascondere quanto fai schifo!":"audio/taunts/it/after_hit_10.mp3?v=1770430276701","Come fai a essere così inutile?!":"audio/taunts/it/after_hit_11.mp3?v=1770430276701","Ehi, calmati, la morte sta arrivando!":"audio/taunts/it/reckless_movement_00.mp3?v=1770430276701","Spericolato? Più che altro suicida con zero stile!":"audio/taunts/it/reckless_movement_01.mp3?v=1770430276701","Corri come se avessi un cervello... ah no, scusa, non ce l'hai!":"audio/taunts/it/reckless_movement_02.mp3?v=1770430276701","Vai forte, eh? Peccato che la competenza non tenga il passo!":"audio/taunts/it/reckless_movement_03.mp3?v=1770430276701","Rallenta prima di imbarazzarti ancora di più!":"audio/taunts/it/reckless_movement_04.mp3?v=1770430276701","Guarda come vai dritto verso l'umiliazione totale!":"audio/taunts/it/reckless_movement_05.mp3?v=1770430276701","Veloce e stupido: combinazione letale per un perdente come te!":"audio/taunts/it/reckless_movement_06.mp3?v=1770430276701","La fisica ti odia quasi quanto me!":"audio/taunts/it/reckless_movement_07.mp3?v=1770430276701","Il tuo slancio è proporzionale alla tua stupidità: immenso!":"audio/taunts/it/reckless_movement_08.mp3?v=1770430276701","Continua a sbracciarti così, idiota, è esilarante!":"audio/taunts/it/reckless_movement_09.mp3?v=1770430276701","È il tuo primo giorno da vivo? Perché fai troppo schifo!":"audio/taunts/it/general_mockery_00.mp3?v=1770430276701","Ma tu hai mai vinto qualcosa in vita tua o solo perso?":"audio/taunts/it/general_mockery_01.mp3?v=1770430276701","Giochi come se le dita fossero incollate col bostik!":"audio/taunts/it/general_mockery_02.mp3?v=1770430276701","POTRESTI fare meglio... forse in un'altra vita!":"audio/taunts/it/general_mockery_03.mp3?v=1770430276701","Il tuo livello è così basso che serve un sottomarino per trovarlo!":"audio/taunts/it/general_mockery_04.mp3?v=1770430276701","Mia zia con l'artrite ti umilierebbe senza fatica!":"audio/taunts/it/general_mockery_05.mp3?v=1770430276701","Continua a provare? No, molla finché sei irrimediabilmente indietro!":"audio/taunts/it/general_mockery_06.mp3?v=1770430276701","Guardarti giocare è una tortura peggiore dell'inferno!":"audio/taunts/it/general_mockery_07.mp3?v=1770430276701","Mia nonna cieca e morta gioca meglio di te!":"audio/taunts/it/general_mockery_08.mp3?v=1770430276701","Non sei solo scarso, sei un insulto ai giocatori scarsi!":"audio/taunts/it/general_mockery_09.mp3?v=1770430276701","Ci provi almeno o è solo masochismo puro?":"audio/taunts/it/general_mockery_10.mp3?v=1770430276701","Spiegami una cosa, sei scarso o ti stai sabotando da solo?":"audio/taunts/it/general_mockery_11.mp3?v=1770430276701","Molla, tanto sei nato per perdere, non forzare la natura!":"audio/taunts/it/general_mockery_12.mp3?v=1770430276701","Per favore mi svegli quando smetti di essere una barzelletta totale?":"audio/taunts/it/general_mockery_13.mp3?v=1770430276701","Molla—risparmiaci tutti dalla tua esibizione vergognosa!":"audio/taunts/it/general_mockery_14.mp3?v=1770430276701","Sei un insulto all'evoluzione umana!":"audio/taunts/it/general_mockery_15.mp3?v=1770430276701","Cancella l'app e vai a zappare la terra, almeno lì servi!":"audio/taunts/it/general_mockery_16.mp3?v=1770430276701","Non sta andando bene? Tranquillo, le mie aspettative sono molto più basse!":"audio/taunts/it/general_mockery_17.mp3?v=1770430276701","Hai fatto un corso per imparare a fare così schifo?":"audio/taunts/it/general_mockery_18.mp3?v=1770430276701","Difficoltà facile? Per te servirebbe 'modalità vegetale'!":"audio/taunts/it/general_mockery_19.mp3?v=1770430276701","Cancella il gioco, cancella l'account, cancella te stesso!":"audio/taunts/it/general_mockery_20.mp3?v=1770430276701","Il tuo record è un crimine di guerra contro il gaming!":"audio/taunts/it/general_mockery_21.mp3?v=1770430276701","Difficoltà più facile? Non ne esiste una abbastanza bassa per te!":"audio/taunts/it/general_mockery_22.mp3?v=1770430276701","FATTI UNA CORTESIA: DISINSTALLA E NON TORNARE MAI PIÙ!":"audio/taunts/it/general_mockery_23.mp3?v=1770430276701","Un altro colpo e sei storia, relitto umano!":"audio/taunts/it/near_death_00.mp3?v=1770430276701","Rinuncia! Risparmiaci questo spettacolo patetico!":"audio/taunts/it/near_death_01.mp3?v=1770430276701","Non resistere, tanto sei già morto dentro!":"audio/taunts/it/near_death_02.mp3?v=1770430276701","Guardarti aggrappato alla vita, è sinceramente imbarazzante!":"audio/taunts/it/near_death_03.mp3?v=1770430276701","Hai finito? Accetta la tua totale inutilità e torna a casa.":"audio/taunts/it/near_death_04.mp3?v=1770430276701","La sconfitta ti sta bene, indossala con orgoglio!":"audio/taunts/it/near_death_05.mp3?v=1770430276701","Ultima vita? La sprecherai come hai fatto per tutta la tua esistenza!":"audio/taunts/it/near_death_06.mp3?v=1770430276701","Sopravvivere non è roba per fenomeni come te!":"audio/taunts/it/near_death_07.mp3?v=1770430276701","La tua ultima vita ti costerà il prezzo di un funerale!":"audio/taunts/it/near_death_08.mp3?v=1770430276701","La vittoria è così dolce, le tue lacrime la renderanno ancora più dolce!":"audio/taunts/it/near_death_09.mp3?v=1770430276701","Riposa in pace, bollito!":"audio/taunts/it/final_death_00.mp3?v=1770430276701","Il mondo ringrazia per la tua dipartita!":"audio/taunts/it/final_death_01.mp3?v=1770430276701","Anche questa è andata. Prossimo perdente, prego!":"audio/taunts/it/final_death_02.mp3?v=1770430276701","SAPEVO che eri troppo incompetente per vincere!":"audio/taunts/it/final_death_03.mp3?v=1770430276701","Morto e sepolto, esattamente come il tuo talento!":"audio/taunts/it/final_death_04.mp3?v=1770430276701","Lo sapevo: eri troppo scarso per farcela!":"audio/taunts/it/final_death_05.mp3?v=1770430276701","Grazie per avermi fatto ridere":"audio/taunts/it/final_death_06.mp3?v=1770430276701","Grazie per le risate, fallimento monumentale!":"audio/taunts/it/final_death_07.mp3?v=1770430276701","Buona fortuna la prossima volta? Avrai bisogno di un miracolo!":"audio/taunts/it/final_death_08.mp3?v=1770430276701","Dai... avanti che ci avevi creduto.":"audio/taunts/it/final_death_09.mp3?v=1770430276701","La morte più ridicola che abbia mai visto, complimenti!":"audio/taunts/it/final_death_10.mp3?v=1770430276701","SPLASH! Che botta!":"audio/taunts/it/fall_off_edge_00.mp3?v=1770430276701","Addio, disastro con le gambe!":"audio/taunts/it/fall_off_edge_01.mp3?v=1770430276701","La gravità ci ha finalmente fatto un favore!":"audio/taunts/it/fall_off_edge_02.mp3?v=1770430276701","Caduto come la tua autostima: di botto!":"audio/taunts/it/fall_off_edge_03.mp3?v=1770430276701","Addio, spreco di ossigeno!":"audio/taunts/it/fall_off_edge_04.mp3?v=1770430276701","Mani di burro? Il cervello sarà olio d'oliva!":"audio/taunts/it/fall_off_edge_05.mp3?v=1770430276701","Idiota disattento ottiene esattamente ciò che merita!":"audio/taunts/it/fall_off_edge_06.mp3?v=1770430276701","Goditi il viaggio verso l'oblio, perdente!":"audio/taunts/it/fall_off_edge_07.mp3?v=1770430276701","Non ho neanche dovuto mirare: hai fatto tutto tu!":"audio/taunts/it/fall_off_edge_08.mp3?v=1770430276701","Sopravvissuto alla modalità facile? Sei più intelligente di un macaco!":"audio/taunts/it/difficulty_increase_2_00.mp3?v=1770430276701","Pensavi fosse difficile? Ora piangerai!":"audio/taunts/it/difficulty_increase_2_01.mp3?v=1770430276701","Si alza il livello, preparati all'umiliazione!":"audio/taunts/it/difficulty_increase_2_02.mp3?v=1770430276701","Difficoltà media per giocatori mediocri!":"audio/taunts/it/difficulty_increase_2_03.mp3?v=1770430276701","Modalità difficile! Adesso mi alzo dalla sedia!":"audio/taunts/it/difficulty_increase_3_00.mp3?v=1770430276701","Modalità difficile: qui muoiono i deboli come te!":"audio/taunts/it/difficulty_increase_3_01.mp3?v=1770430276701","Ancora vivo? Errore temporaneo, correggo subito!":"audio/taunts/it/difficulty_increase_3_02.mp3?v=1770430276701","Ancora vivo? Cambierà in 3... 2... 1...":"audio/taunts/it/difficulty_increase_3_03.mp3?v=1770430276701","Il vero gioco inizia, i perdenti escono di scena!":"audio/taunts/it/difficulty_increase_3_04.mp3?v=1770430276701","La tua agonia diventa seria, che goduria!":"audio/taunts/it/difficulty_increase_3_05.mp3?v=1770430276701","La tua sopravvivenza era carina finché è durata!":"audio/taunts/it/difficulty_increase_3_06.mp3?v=1770430276701","MODALITÀ BRUTALE, ora mammina ti fa male!":"audio/taunts/it/difficulty_increase_4_00.mp3?v=1770430276701","BRUTALE! Sei già morto, solo non lo sai ancora!":"audio/taunts/it/difficulty_increase_4_01.mp3?v=1770430276701","Massima difficoltà: prega, tanto non serve!":"audio/taunts/it/difficulty_increase_4_02.mp3?v=1770430276701","Dolore massimo in arrivo. Prega per una morte veloce!":"audio/taunts/it/difficulty_increase_4_03.mp3?v=1770430276701","Nessuna pietà, nessuna speranza, il riassunto della tua vita!":"audio/taunts/it/difficulty_increase_4_04.mp3?v=1770430276701","Niente pietà per gli scarsetti come te!":"audio/taunts/it/difficulty_increase_4_05.mp3?v=1770430276701","Sei arrivato qui? Che persona incredibile... ha detto nessuno mai!":"audio/taunts/it/difficulty_increase_4_06.mp3?v=1770430276701"};
+const TAUNTS_AUDIO = {"Sei un fallimento totale. Pagliaccio!":"audio/taunts/it/edge_proximity_00.mp3?v=1770431130561","Barcolli come il nulla che sei. CADI CHE RISPARMIAMO TEMPO!":"audio/taunts/it/edge_proximity_01.mp3?v=1770431130561","Un altro millimetro e finisci nel dimenticatoio, fenomeno da baraccone!":"audio/taunts/it/edge_proximity_02.mp3?v=1770431130561","Così vicino al bordo... una metafora sulla tua vita!":"audio/taunts/it/edge_proximity_03.mp3?v=1770431130561","Sento quasi il tuo patetico cuoricino accelerare!":"audio/taunts/it/edge_proximity_04.mp3?v=1770431130561","Il vuoto ti sta chiamando per nome, rispondigli, codardo!":"audio/taunts/it/edge_proximity_05.mp3?v=1770431130561","Il vuoto ti implora, sei uno spreco di ossigeno!":"audio/taunts/it/edge_proximity_06.mp3?v=1770431130561","Dai, sporgiti un po' di più, tanto sei già un fallito!":"audio/taunts/it/edge_proximity_07.mp3?v=1770431130561","Palmi sudati? È il sapore della sconfitta inevitabile!":"audio/taunts/it/edge_proximity_08.mp3?v=1770431130561","Dai, sporgiti, solo un altro po', cane senza appello!":"audio/taunts/it/edge_proximity_09.mp3?v=1770431130561","Un piccolo scivolone e addio al peggior giocatore del pianeta!":"audio/taunts/it/edge_proximity_10.mp3?v=1770431130561","Sull'orlo della gloria? Più sull'orlo della tua fine senza senso!":"audio/taunts/it/edge_proximity_11.mp3?v=1770431130561","Ti vedo barcollare come la tua autostima: zero equilibrio!":"audio/taunts/it/edge_proximity_12.mp3?v=1770431130561","Un passetto e sparisci per sempre. Fatti questo favore!":"audio/taunts/it/edge_proximity_13.mp3?v=1770431130561","Guardarti barcollare è l'unica gioia dal tuo gioco schifoso!":"audio/taunts/it/edge_proximity_14.mp3?v=1770431130561","Precipita! Verme senza spina dorsale!":"audio/taunts/it/edge_proximity_15.mp3?v=1770431130561","L'abisso ha fame e tu sei lo spuntino perfetto.!":"audio/taunts/it/edge_proximity_16.mp3?v=1770431130561","Colpo diretto, sacco flaccido di fallimento!":"audio/taunts/it/after_hit_00.mp3?v=1770431130561","Ahi, quello ha fatto male... alla tua dignità, soprattutto!":"audio/taunts/it/after_hit_01.mp3?v=1770431130561","Sei più lento di un bradipo morto!":"audio/taunts/it/after_hit_02.mp3?v=1770431130561","HAHA! Te lo sei preso dritto in faccia, vero, perdente?":"audio/taunts/it/after_hit_03.mp3?v=1770431130561","Questo avrà fatto più male al tuo ego che ad altro!":"audio/taunts/it/after_hit_04.mp3?v=1770431130561","Ho visto statue più mobili di te!":"audio/taunts/it/after_hit_05.mp3?v=1770431130561","Centro perfetto sul re dei perdenti, che onore per me!":"audio/taunts/it/after_hit_06.mp3?v=1770431130561","Troppo lento, troppo stupido, totalmente patetico!":"audio/taunts/it/after_hit_07.mp3?v=1770431130561","I tuoi riflessi meritano un museo del fallimento!":"audio/taunts/it/after_hit_08.mp3?v=1770431130561","Centro perfetto sul peggior giocatore del mondo, complimenti... spazzatura!":"audio/taunts/it/after_hit_09.mp3?v=1770431130561","Non stai neanche provando a nascondere quanto fai schifo!":"audio/taunts/it/after_hit_10.mp3?v=1770431130561","Come fai a essere così inutile?!":"audio/taunts/it/after_hit_11.mp3?v=1770431130561","Ehi, calmati, la morte sta arrivando!":"audio/taunts/it/reckless_movement_00.mp3?v=1770431130561","Spericolato? Più che altro suicida con zero stile!":"audio/taunts/it/reckless_movement_01.mp3?v=1770431130561","Corri come se avessi un cervello... ah no, scusa, non ce l'hai!":"audio/taunts/it/reckless_movement_02.mp3?v=1770431130561","Vai forte, eh? Peccato che la competenza non tenga il passo!":"audio/taunts/it/reckless_movement_03.mp3?v=1770431130561","Rallenta prima di imbarazzarti ancora di più!":"audio/taunts/it/reckless_movement_04.mp3?v=1770431130561","Guarda come vai dritto verso l'umiliazione totale!":"audio/taunts/it/reckless_movement_05.mp3?v=1770431130561","Veloce e stupido: combinazione letale per un perdente come te!":"audio/taunts/it/reckless_movement_06.mp3?v=1770431130561","La fisica ti odia quasi quanto me!":"audio/taunts/it/reckless_movement_07.mp3?v=1770431130561","Il tuo slancio è proporzionale alla tua stupidità: immenso!":"audio/taunts/it/reckless_movement_08.mp3?v=1770431130561","Continua a sbracciarti così, idiota, è esilarante!":"audio/taunts/it/reckless_movement_09.mp3?v=1770431130561","È il tuo primo giorno da vivo? Perché fai troppo schifo!":"audio/taunts/it/general_mockery_00.mp3?v=1770431130561","Ma tu hai mai vinto qualcosa in vita tua o solo perso?":"audio/taunts/it/general_mockery_01.mp3?v=1770431130561","Giochi come se le dita fossero incollate col bostik!":"audio/taunts/it/general_mockery_02.mp3?v=1770431130561","POTRESTI fare meglio... forse in un'altra vita!":"audio/taunts/it/general_mockery_03.mp3?v=1770431130561","Il tuo livello è così basso che serve un sottomarino per trovarlo!":"audio/taunts/it/general_mockery_04.mp3?v=1770431130561","Mia zia con l'artrite ti umilierebbe senza fatica!":"audio/taunts/it/general_mockery_05.mp3?v=1770431130561","Continua a provare? No, molla finché sei irrimediabilmente indietro!":"audio/taunts/it/general_mockery_06.mp3?v=1770431130561","Guardarti giocare è una tortura peggiore dell'inferno!":"audio/taunts/it/general_mockery_07.mp3?v=1770431130561","Mia nonna cieca e morta gioca meglio di te!":"audio/taunts/it/general_mockery_08.mp3?v=1770431130561","Non sei solo scarso, sei un insulto ai giocatori scarsi!":"audio/taunts/it/general_mockery_09.mp3?v=1770431130561","Ci provi almeno o è solo masochismo puro?":"audio/taunts/it/general_mockery_10.mp3?v=1770431130561","Spiegami una cosa, sei scarso o ti stai sabotando da solo?":"audio/taunts/it/general_mockery_11.mp3?v=1770431130561","Molla, tanto sei nato per perdere, non forzare la natura!":"audio/taunts/it/general_mockery_12.mp3?v=1770431130561","Per favore mi svegli quando smetti di essere una barzelletta totale?":"audio/taunts/it/general_mockery_13.mp3?v=1770431130561","Molla—risparmiaci tutti dalla tua esibizione vergognosa!":"audio/taunts/it/general_mockery_14.mp3?v=1770431130561","Sei un insulto all'evoluzione umana!":"audio/taunts/it/general_mockery_15.mp3?v=1770431130561","Cancella l'app e vai a zappare la terra, almeno lì servi!":"audio/taunts/it/general_mockery_16.mp3?v=1770431130561","Non sta andando bene? Tranquillo, le mie aspettative sono molto più basse!":"audio/taunts/it/general_mockery_17.mp3?v=1770431130561","Hai fatto un corso per imparare a fare così schifo?":"audio/taunts/it/general_mockery_18.mp3?v=1770431130561","Difficoltà facile? Per te servirebbe 'modalità vegetale'!":"audio/taunts/it/general_mockery_19.mp3?v=1770431130561","Cancella il gioco, cancella l'account, cancella te stesso!":"audio/taunts/it/general_mockery_20.mp3?v=1770431130561","Il tuo record è un crimine di guerra contro il gaming!":"audio/taunts/it/general_mockery_21.mp3?v=1770431130561","Difficoltà più facile? Non ne esiste una abbastanza bassa per te!":"audio/taunts/it/general_mockery_22.mp3?v=1770431130561","FATTI UNA CORTESIA: DISINSTALLA E NON TORNARE MAI PIÙ!":"audio/taunts/it/general_mockery_23.mp3?v=1770431130561","Un altro colpo e sei storia, relitto umano!":"audio/taunts/it/near_death_00.mp3?v=1770431130561","Rinuncia! Risparmiaci questo spettacolo patetico!":"audio/taunts/it/near_death_01.mp3?v=1770431130561","Non resistere, tanto sei già morto dentro!":"audio/taunts/it/near_death_02.mp3?v=1770431130561","Guardarti aggrappato alla vita, è sinceramente imbarazzante!":"audio/taunts/it/near_death_03.mp3?v=1770431130561","Hai finito? Accetta la tua totale inutilità e torna a casa.":"audio/taunts/it/near_death_04.mp3?v=1770431130561","La sconfitta ti sta bene, indossala con orgoglio!":"audio/taunts/it/near_death_05.mp3?v=1770431130561","Ultima vita? La sprecherai come hai fatto per tutta la tua esistenza!":"audio/taunts/it/near_death_06.mp3?v=1770431130561","Sopravvivere non è roba per fenomeni come te!":"audio/taunts/it/near_death_07.mp3?v=1770431130561","La tua ultima vita ti costerà il prezzo di un funerale!":"audio/taunts/it/near_death_08.mp3?v=1770431130561","La vittoria è così dolce, le tue lacrime la renderanno ancora più dolce!":"audio/taunts/it/near_death_09.mp3?v=1770431130561","Riposa in pace, bollito!":"audio/taunts/it/final_death_00.mp3?v=1770431130561","Il mondo ringrazia per la tua dipartita!":"audio/taunts/it/final_death_01.mp3?v=1770431130561","Anche questa è andata. Prossimo perdente, prego!":"audio/taunts/it/final_death_02.mp3?v=1770431130561","SAPEVO che eri troppo incompetente per vincere!":"audio/taunts/it/final_death_03.mp3?v=1770431130561","Morto e sepolto, esattamente come il tuo talento!":"audio/taunts/it/final_death_04.mp3?v=1770431130561","Lo sapevo: eri troppo scarso per farcela!":"audio/taunts/it/final_death_05.mp3?v=1770431130561","Grazie per avermi fatto ridere":"audio/taunts/it/final_death_06.mp3?v=1770431130561","Grazie per le risate, fallimento monumentale!":"audio/taunts/it/final_death_07.mp3?v=1770431130561","Buona fortuna la prossima volta? Avrai bisogno di un miracolo!":"audio/taunts/it/final_death_08.mp3?v=1770431130561","Dai... avanti che ci avevi creduto.":"audio/taunts/it/final_death_09.mp3?v=1770431130561","La morte più ridicola che abbia mai visto, complimenti!":"audio/taunts/it/final_death_10.mp3?v=1770431130561","SPLASH! Che botta!":"audio/taunts/it/fall_off_edge_00.mp3?v=1770431130561","Addio, disastro con le gambe!":"audio/taunts/it/fall_off_edge_01.mp3?v=1770431130561","La gravità ci ha finalmente fatto un favore!":"audio/taunts/it/fall_off_edge_02.mp3?v=1770431130561","Caduto come la tua autostima: di botto!":"audio/taunts/it/fall_off_edge_03.mp3?v=1770431130561","Addio, spreco di ossigeno!":"audio/taunts/it/fall_off_edge_04.mp3?v=1770431130561","Mani di burro? Il cervello sarà olio d'oliva!":"audio/taunts/it/fall_off_edge_05.mp3?v=1770431130561","Idiota disattento ottiene esattamente ciò che merita!":"audio/taunts/it/fall_off_edge_06.mp3?v=1770431130561","Goditi il viaggio verso l'oblio, perdente!":"audio/taunts/it/fall_off_edge_07.mp3?v=1770431130561","Non ho neanche dovuto mirare: hai fatto tutto tu!":"audio/taunts/it/fall_off_edge_08.mp3?v=1770431130561","Sopravvissuto alla modalità facile? Sei più intelligente di un macaco!":"audio/taunts/it/difficulty_increase_2_00.mp3?v=1770431130561","Pensavi fosse difficile? Ora piangerai!":"audio/taunts/it/difficulty_increase_2_01.mp3?v=1770431130561","Si alza il livello, preparati all'umiliazione!":"audio/taunts/it/difficulty_increase_2_02.mp3?v=1770431130561","Difficoltà media per giocatori mediocri!":"audio/taunts/it/difficulty_increase_2_03.mp3?v=1770431130561","Modalità difficile! Adesso mi alzo dalla sedia!":"audio/taunts/it/difficulty_increase_3_00.mp3?v=1770431130561","Modalità difficile: qui muoiono i deboli come te!":"audio/taunts/it/difficulty_increase_3_01.mp3?v=1770431130561","Ancora vivo? Errore temporaneo, correggo subito!":"audio/taunts/it/difficulty_increase_3_02.mp3?v=1770431130561","Ancora vivo? Cambierà in 3... 2... 1...":"audio/taunts/it/difficulty_increase_3_03.mp3?v=1770431130561","Il vero gioco inizia, i perdenti escono di scena!":"audio/taunts/it/difficulty_increase_3_04.mp3?v=1770431130561","La tua agonia diventa seria, che goduria!":"audio/taunts/it/difficulty_increase_3_05.mp3?v=1770431130561","La tua sopravvivenza era carina finché è durata!":"audio/taunts/it/difficulty_increase_3_06.mp3?v=1770431130561","MODALITÀ BRUTALE, ora mammina ti fa male!":"audio/taunts/it/difficulty_increase_4_00.mp3?v=1770431130561","BRUTALE! Sei già morto, solo non lo sai ancora!":"audio/taunts/it/difficulty_increase_4_01.mp3?v=1770431130561","Massima difficoltà: prega, tanto non serve!":"audio/taunts/it/difficulty_increase_4_02.mp3?v=1770431130561","Dolore massimo in arrivo. Prega per una morte veloce!":"audio/taunts/it/difficulty_increase_4_03.mp3?v=1770431130561","Nessuna pietà, nessuna speranza, il riassunto della tua vita!":"audio/taunts/it/difficulty_increase_4_04.mp3?v=1770431130561","Niente pietà per gli scarsetti come te!":"audio/taunts/it/difficulty_increase_4_05.mp3?v=1770431130561","Sei arrivato qui? Che persona incredibile... ha detto nessuno mai!":"audio/taunts/it/difficulty_increase_4_06.mp3?v=1770431130561"};
 
 // ========== config.js ==========
 /**
@@ -314,6 +314,7 @@ const gameState = {
 };
 
 let scene, camera, renderer, platformEdges;
+let grassBlades = [];
 let wakeLock = null;
 let tempQuaternion, rotationAxis;
 let startScreen, calibrationScreen, gameContainer;
@@ -677,6 +678,7 @@ function initThreeJS() {
 
     createLighting();
     createPlatform();
+    createGrassBlades();
     createStarfield();
     createPlayerBox();
 
@@ -701,57 +703,11 @@ function createLighting() {
 
 function createGrassTexture() {
     var c = document.createElement('canvas');
-    c.width = 512; c.height = 512;
+    c.width = 64; c.height = 64;
     var ctx = c.getContext('2d');
-
-    // Base green
-    ctx.fillStyle = '#2a6e1e';
-    ctx.fillRect(0, 0, 512, 512);
-
-    // Patches of darker/lighter green
-    for (var i = 0; i < 80; i++) {
-        var x = Math.random() * 512;
-        var y = Math.random() * 512;
-        var r = 15 + Math.random() * 40;
-        var g = ctx.createRadialGradient(x, y, 0, x, y, r);
-        var shade = Math.random() > 0.5 ? '#3d8f2e' : '#2e7a20';
-        g.addColorStop(0, shade);
-        g.addColorStop(1, 'transparent');
-        ctx.fillStyle = g;
-        ctx.fillRect(x - r, y - r, r * 2, r * 2);
-    }
-
-    // Grass blades
-    for (var j = 0; j < 600; j++) {
-        var bx = Math.random() * 512;
-        var by = Math.random() * 512;
-        var bl = 4 + Math.random() * 10;
-        var angle = -Math.PI / 2 + (Math.random() - 0.5) * 0.8;
-        ctx.strokeStyle = 'rgba(' +
-            Math.floor(30 + Math.random() * 40) + ',' +
-            Math.floor(90 + Math.random() * 80) + ',' +
-            Math.floor(10 + Math.random() * 30) + ',0.7)';
-        ctx.lineWidth = 1;
-        ctx.beginPath();
-        ctx.moveTo(bx, by);
-        ctx.lineTo(bx + Math.cos(angle) * bl, by + Math.sin(angle) * bl);
-        ctx.stroke();
-    }
-
-    // Small flowers / dots
-    for (var k = 0; k < 20; k++) {
-        var fx = Math.random() * 512;
-        var fy = Math.random() * 512;
-        ctx.fillStyle = ['#f0e68c', '#ffffff', '#dda0dd', '#ffb6c1'][Math.floor(Math.random() * 4)];
-        ctx.beginPath();
-        ctx.arc(fx, fy, 1.5 + Math.random(), 0, Math.PI * 2);
-        ctx.fill();
-    }
-
-    var tex = new THREE.CanvasTexture(c);
-    tex.wrapS = tex.wrapT = THREE.RepeatWrapping;
-    tex.repeat.set(2, 2);
-    return tex;
+    ctx.fillStyle = '#4a9e3e';
+    ctx.fillRect(0, 0, 64, 64);
+    return new THREE.CanvasTexture(c);
 }
 
 function createPlatform() {
@@ -783,6 +739,43 @@ function createPlatform() {
     addEdge(PLATFORM_WIDTH + 0.3, 0.15, 0, -PLATFORM_DEPTH / 2 - 0.075);
     addEdge(0.15, PLATFORM_DEPTH, -PLATFORM_WIDTH / 2 - 0.075, 0);
     addEdge(0.15, PLATFORM_DEPTH, PLATFORM_WIDTH / 2 + 0.075, 0);
+}
+
+// ========== 3D GRASS BLADES ==========
+
+function createGrassBlades() {
+    grassBlades = [];
+    var bladeCount = 200;
+    var bladeGeo = new THREE.PlaneGeometry(0.08, 0.4);
+    // Shift geometry so bottom edge is at origin (pivot from base)
+    bladeGeo.translate(0, 0.2, 0);
+
+    for (var i = 0; i < bladeCount; i++) {
+        var green = 0.25 + Math.random() * 0.35;
+        var mat = new THREE.MeshStandardMaterial({
+            color: new THREE.Color(0.1 + Math.random() * 0.1, green, 0.05 + Math.random() * 0.08),
+            side: THREE.DoubleSide,
+            roughness: 0.8
+        });
+
+        var blade = new THREE.Mesh(bladeGeo, mat);
+        blade.position.set(
+            (Math.random() - 0.5) * (PLATFORM_WIDTH - 0.5),
+            0.01,
+            (Math.random() - 0.5) * (PLATFORM_DEPTH - 0.5)
+        );
+        blade.rotation.y = Math.random() * Math.PI;
+        scene.add(blade);
+        grassBlades.push(blade);
+    }
+}
+
+function updateGrassBlades() {
+    var time = performance.now() * 0.001;
+    for (var i = 0; i < grassBlades.length; i++) {
+        var blade = grassBlades[i];
+        blade.rotation.z = Math.sin(time * 1.5 + blade.position.x * 2 + blade.position.z * 2) * 0.15;
+    }
 }
 
 // ========== STARFIELD ==========
@@ -1655,15 +1648,19 @@ function createCoin() {
     // Gold material with glow
     const material = new THREE.MeshStandardMaterial({
         color: 0xffd700,
-        metalness: 0.8,
-        roughness: 0.2,
+        metalness: 1.0,
+        roughness: 0.1,
         emissive: 0xffa500,
-        emissiveIntensity: 0.3
+        emissiveIntensity: 0.5
     });
 
     currentCoin = new THREE.Mesh(geometry, material);
     currentCoin.rotation.x = Math.PI / 2;  // Lay flat, facing up
-    currentCoin.castShadow = true;
+
+    // Add glow point light as child of coin
+    const coinGlow = new THREE.PointLight(0xffd700, 1, 3);
+    coinGlow.position.set(0, 0, 0);
+    currentCoin.add(coinGlow);
 
     // Spawn at random safe position
     spawnCoinAtRandomPosition();
@@ -3776,6 +3773,9 @@ function animate() {
 
     // Animate background (shooting stars, aliens, etc.)
     updateBackground();
+
+    // Grass blade sway animation
+    updateGrassBlades();
 
     // Edge pulse animation (always runs for visual continuity)
     const pulse = 0.7 + Math.sin(performance.now() * 0.003) * 0.3;
