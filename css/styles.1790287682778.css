@@ -1008,3 +1008,58 @@ html, body {
     .tutorial-card, .tutorial-progress i { transition: none; }
     .tutorial-card.shake { animation: none; }
 }
+
+
+/* ========================
+   Install & offline
+   ======================== */
+.btn-install {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #cbd5e1;
+    border-color: #4ade8055;
+}
+
+.offline-status {
+    margin-top: 8px;
+    color: #4ade80;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+.install-help {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(5, 6, 12, 0.82);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+.install-help-card {
+    max-width: 340px;
+    padding: 24px 22px;
+    border-radius: 20px;
+    border: 1px solid #ffffff1f;
+    background: #0f1228;
+    text-align: center;
+    color: #e2e8f0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.install-help-card img {
+    border-radius: 14px;
+    margin-bottom: 12px;
+}
+
+.install-help-card .btn-primary {
+    margin-top: 16px;
+    padding: 12px 40px;
+    font-size: 16px;
+}

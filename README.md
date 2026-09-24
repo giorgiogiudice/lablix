@@ -71,6 +71,13 @@ The game runs entirely in the browser with no installs required — just open th
 - Particle effects on coin collection, shoe bounces, and hits
 - Glowing red platform edges
 
+### Offline & Installable
+- Installable to the home screen (web app manifest, full-screen, portrait)
+- A service worker precaches the whole game on the first visit: code, Three.js, music, sound effects and every Italian voice line
+- After that it plays with no connection at all, in English and Italian
+- English taunts use the device's own speech voices; offline, only voices installed on the device can speak
+- An **Install Lablix** button on the start screen uses the browser's install prompt where available, and shows Add-to-Home-Screen instructions elsewhere (iOS)
+
 ### Multilingual
 - English and Italian language support
 - Browser language auto-detection
@@ -81,7 +88,8 @@ The game runs entirely in the browser with no installs required — just open th
 
 | Technology | Purpose |
 |------------|---------|
-| [Three.js](https://threejs.org/) (r150) | 3D rendering |
+| [Three.js](https://threejs.org/) (r150, self-hosted) | 3D rendering |
+| Service Worker + Web App Manifest | Offline play, install to home screen |
 | Device Orientation API | Gyroscope input |
 | Web Speech API | English voice synthesis |
 | ElevenLabs TTS | Pre-recorded Italian voice lines |
@@ -112,14 +120,19 @@ lablix/
 │   │   ├── projectile.js   # Shoe projectile system
 │   │   ├── collision.js    # Hit detection & damage effects
 │   │   ├── ui.js           # HUD & game over screen
+│   │   ├── tutorial.js     # Guided tutorial
+│   │   ├── pwa.js          # Service worker registration & install button
 │   │   └── game.js         # Main game loop & screen management
 │   ├── data/
 │   │   └── taunts.json     # All taunt text (EN + IT)
 │   ├── audio/
 │   │   ├── fx/             # Sound effects (step, coin, hit, fall, wosh)
 │   │   └── taunts/it/      # Pre-recorded Italian voice lines
-│   └── img/
-│       └── logo.png        # Game logo
+│   ├── img/
+│   │   ├── logo.png        # Game logo
+│   │   └── icons/          # App icons (home screen, maskable)
+│   ├── vendor/three.min.js # Self-hosted Three.js r150
+│   └── sw.template.js      # Service worker template (build fills in the precache list)
 ├── build.js                # Build system (concatenation + cache busting)
 ├── package.json            # npm scripts
 └── Lablix.md               # Detailed game design document
@@ -173,6 +186,7 @@ The build script (`build.js`):
 4. Copies audio, image, and CSS assets
 5. Applies cache busting via timestamp-based filenames (`game.{ts}.js`, `styles.{ts}.css`)
 6. Outputs `index.html` with the correct asset references
+7. Writes `manifest.json` and `sw.js`, whose precache list covers every file the game can load
 
 No external build tools (webpack, vite, etc.) are needed — just Node.js.
 

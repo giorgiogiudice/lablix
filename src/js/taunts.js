@@ -111,8 +111,15 @@ function speakTaunt(text) {
     const langMap = { en: 'en-US', it: 'it-IT' };
     utterance.lang = langMap[lang] || 'en-US';
 
-    if (speechVoice) {
-        utterance.voice = speechVoice;
+    let voice = speechVoice;
+    if (voice && voice.localService === false && navigator.onLine === false) {
+        // Network voices go silent offline: fall back to one installed on the device
+        const prefix = (langMap[lang] || 'en-US').slice(0, 2);
+        const local = speechSynthesis.getVoices().filter(v => v.localService && v.lang.toLowerCase().startsWith(prefix));
+        voice = local[0] || null;
+    }
+    if (voice) {
+        utterance.voice = voice;
     }
 
     speechSynthesis.speak(utterance);

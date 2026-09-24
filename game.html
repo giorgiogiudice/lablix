@@ -10,9 +10,13 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
     <title>Lablix</title>
+    <meta name="theme-color" content="#0f1228">
+    <meta name="apple-mobile-web-app-title" content="Lablix">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="manifest" href="manifest.json">
     <link rel="icon" type="image/png" href="img/logo.png">
-    <link rel="apple-touch-icon" href="img/logo.png">
-    <link rel="stylesheet" href="css/styles.1790281593138.css" id="main-css">
+    <link rel="apple-touch-icon" href="img/icons/apple-touch-icon.png">
+    <link rel="stylesheet" href="css/styles.1790287682778.css" id="main-css">
 </head>
 <body>
     <!-- Mobile Only Message -->
@@ -62,7 +66,18 @@
 
             <button id="start-button" class="btn-primary" data-i18n="ui.play">PLAY</button>
             <p class="high-score"><span data-i18n="ui.highScore">High Score</span>: <span id="high-score">0</span></p>
+            <button id="install-button" class="btn-secondary btn-install hidden" type="button"><span aria-hidden="true">⤓</span> <span data-i18n="ui.install">Install Lablix</span></button>
+            <p id="offline-status" class="offline-status hidden"><span aria-hidden="true">✓</span> <span data-i18n="ui.offlineReady">Playable offline</span></p>
             <p class="credits"><span data-i18n-key="creditsLabel">Ideator &amp; Creator</span> <a href="https://giorgiogiudice.com" target="_blank" rel="noopener">Giorgio Giudice</a> · <a href="https://github.com/giorgiogiudice/lablix" target="_blank" rel="noopener">GitHub</a></p>
+        </div>
+    </div>
+
+    <!-- Install instructions (iOS / browsers without an install prompt) -->
+    <div id="install-help" class="install-help hidden" role="dialog" aria-modal="true" aria-labelledby="install-help-msg">
+        <div class="install-help-card">
+            <img src="img/icons/icon-192.png" alt="" width="64" height="64">
+            <p id="install-help-msg" data-i18n="ui.installGeneric">Open your browser menu and choose “Install app” or “Add to Home screen”.</p>
+            <button class="btn-primary" type="button" data-i18n="ui.installGotIt">Got it</button>
         </div>
     </div>
 
@@ -140,7 +155,7 @@
             _bgm.pause();
         });
     </script>
-    <script src="https://unpkg.com/three@0.150.0/build/three.min.js"></script>
-    <script src="js/game.1790281593138.js"></script>
+    <script src="vendor/three.min.js?v=1790287682778"></script>
+    <script src="js/game.1790287682778.js"></script>
 </body>
 </html>

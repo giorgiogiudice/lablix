@@ -48,6 +48,26 @@ const TRANSLATIONS = {
             en: 'PLAY',
             it: 'GIOCA'
         },
+        install: {
+            en: 'Install Lablix',
+            it: 'Installa Lablix'
+        },
+        offlineReady: {
+            en: 'Playable offline',
+            it: 'Giocabile offline'
+        },
+        installIOS: {
+            en: 'Tap the Share button, then “Add to Home Screen”. Lablix will then open like an app and play without internet.',
+            it: 'Tocca il pulsante Condividi, poi “Aggiungi alla schermata Home”. Lablix si aprirà come un’app e funzionerà anche senza internet.'
+        },
+        installGeneric: {
+            en: 'Open your browser menu and choose “Install app” or “Add to Home screen”. Lablix will then open like an app and play without internet.',
+            it: 'Apri il menu del browser e scegli “Installa app” o “Aggiungi a schermata Home”. Lablix si aprirà come un’app e funzionerà anche senza internet.'
+        },
+        installGotIt: {
+            en: 'Got it',
+            it: 'Ho capito'
+        },
         highScore: {
             en: 'High Score',
             it: 'Record'

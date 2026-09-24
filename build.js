@@ -24,6 +24,7 @@ const JS_FILES = [
     'collision.js',
     'ui.js',
     'tutorial.js',
+    'pwa.js',
     'game.js'
 ];
 
@@ -109,6 +110,17 @@ function build() {
         console.log(`  📦 Copied ${imgFiles.length} image files`);
     }
 
+    // Copy app icons and vendored libraries (self-hosted so the game runs offline)
+    for (const sub of ['img/icons', 'vendor']) {
+        const from = path.join(SRC_DIR, sub);
+        if (!fs.existsSync(from)) continue;
+        const to = path.join(DIST_DIR, sub);
+        ensureDir(to);
+        const files = fs.readdirSync(from).filter(f => fs.statSync(path.join(from, f)).isFile());
+        files.forEach(f => fs.copyFileSync(path.join(from, f), path.join(to, f)));
+        console.log(`  📦 Copied ${files.length} files to ${sub}/`);
+    }
+
     // Copy music files to dist
     const musicSrcDir = path.join(SRC_DIR, 'audio', 'music');
     if (fs.existsSync(musicSrcDir)) {
@@ -164,6 +176,50 @@ function build() {
     fs.writeFileSync(path.join(DIST_DIR, 'index.html'), html);
     fs.writeFileSync(path.join(DIST_DIR, 'game.html'), html);
     console.log(`  ✅ Created index.html + game.html`);
+
+    // Web app manifest
+    const manifest = {
+        id: './',
+        name: 'Lablix',
+        short_name: 'Lablix',
+        description: 'Tilt to survive. A 3D survival game for your phone.',
+        start_url: './',
+        scope: './',
+        display: 'fullscreen',
+        display_override: ['fullscreen', 'standalone'],
+        orientation: 'portrait',
+        background_color: '#0a0a0f',
+        theme_color: '#0f1228',
+        categories: ['games'],
+        icons: [
+            { src: 'img/icons/icon-192.png', sizes: '192x192', type: 'image/png', purpose: 'any' },
+            { src: 'img/icons/icon-512.png', sizes: '512x512', type: 'image/png', purpose: 'any' },
+            { src: 'img/icons/maskable-512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' }
+        ]
+    };
+    fs.writeFileSync(path.join(DIST_DIR, 'manifest.json'), JSON.stringify(manifest, null, 2) + '\n');
+    console.log(`  ✅ Created manifest.json`);
+
+    // Service worker: precache everything the game can load, so it plays fully offline
+    const listDir = (sub, re) => fs.existsSync(path.join(DIST_DIR, sub))
+        ? fs.readdirSync(path.join(DIST_DIR, sub)).filter(f => re.test(f)).sort().map(f => `${sub}/${f}`) : [];
+    const precache = [
+        './',
+        'manifest.json',
+        `css/${cssFilename}`,
+        `js/${jsFilename}`,
+        `vendor/three.min.js?v=${timestamp}`,
+        'img/logo.png',
+        ...listDir('img/icons', /\.png$/),
+        'audio/music/background.mp3',
+        ...listDir('audio/fx', /\.mp3$/),
+        ...listDir('audio/taunts/it', /\.mp3$/).map(f => `${f}?v=${timestamp}`)
+    ];
+    const sw = fs.readFileSync(path.join(SRC_DIR, 'sw.template.js'), 'utf8')
+        .replace('{{VERSION}}', String(timestamp))
+        .replace('{{PRECACHE}}', JSON.stringify(precache, null, 4));
+    fs.writeFileSync(path.join(DIST_DIR, 'sw.js'), sw);
+    console.log(`  ✅ Created sw.js (${precache.length} files precached)`);
 
     console.log(`\n✨ Build complete!\n`);
 }

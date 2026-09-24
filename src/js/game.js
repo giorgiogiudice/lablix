@@ -38,6 +38,8 @@ function init() {
 
     showScreen('start');
 
+    if (typeof initInstallButton === 'function') initInstallButton();
+
     document.getElementById('start-button').addEventListener('click', onStartClick);
     document.getElementById('calibrate-button').addEventListener('click', onCalibrateClick);
     document.getElementById('calibration-exit-button').addEventListener('click', onCalibrationExitClick);
