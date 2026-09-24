@@ -181,30 +181,32 @@ const TRANSLATIONS = {
 let currentLanguage = 'en';
 
 function initLanguage() {
-    // Check localStorage first
+    // Use stored language only if user manually selected it
     const saved = localStorage.getItem('lablix_language');
-    if (saved && LANGUAGES[saved]) {
+    const isUserSet = localStorage.getItem('lablix_language_user');
+    if (saved && LANGUAGES[saved] && isUserSet) {
         currentLanguage = saved;
         return;
     }
 
-    // Detect browser language
-    const browserLang = navigator.language || navigator.userLanguage;
-    const langCode = browserLang.split('-')[0].toLowerCase();
-
-    if (LANGUAGES[langCode]) {
-        currentLanguage = langCode;
-    } else {
-        currentLanguage = 'en';
+    // Auto-detect from browser preferences
+    const languages = navigator.languages || [navigator.language || navigator.userLanguage || 'en'];
+    for (const lang of languages) {
+        const code = lang.split('-')[0].toLowerCase();
+        if (LANGUAGES[code]) {
+            currentLanguage = code;
+            return;
+        }
     }
 
-    localStorage.setItem('lablix_language', currentLanguage);
+    currentLanguage = 'en';
 }
 
 function setLanguage(langCode) {
     if (!LANGUAGES[langCode]) return;
     currentLanguage = langCode;
     localStorage.setItem('lablix_language', currentLanguage);
+    localStorage.setItem('lablix_language_user', '1');
     updateAllText();
     updateVoiceForLanguage();
 }
