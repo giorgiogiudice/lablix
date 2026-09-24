@@ -223,12 +223,12 @@ const TRANSLATIONS = {
             it: 'Quello è il vuoto. Nel gioco vero è game over immediato. Ti rimetto su.'
         },
         readyTitle: {
-            en: 'Ready. Go!',
-            it: 'Pronto. Via!'
+            en: 'The game starts now!',
+            it: 'Ora si gioca sul serio!'
         },
         readyText: {
-            en: 'Five lives, one box, zero walls. Good luck.',
-            it: 'Cinque vite, una scatola, zero pareti. Buona fortuna.'
+            en: 'Collect as many coins as you can. Don\'t get hit by the shoes and don\'t fall into the void. You have 5 lives.',
+            it: 'Prendi più monete che puoi. Non farti colpire dalle scarpe e non cadere nel vuoto. Hai 5 vite.'
         }
     }
 };

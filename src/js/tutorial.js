@@ -9,7 +9,7 @@ const TUTORIAL_TILT_DISTANCE = 5;      // world units the box must travel in ste
 const TUTORIAL_VOID_MS = 4500;         // how long the "void" step stays up
 const TUTORIAL_SHOES = 3;              // shoes Tracy throws in step 4
 const TUTORIAL_SHOE_INTERVAL = 2200;   // ms between tutorial shoes (slower than tier 1)
-const TUTORIAL_READY_MS = 1800;
+const TUTORIAL_READY_MS = 4000;       // long enough to read the goal before the real game starts
 
 var tutorial = {
     active: false,
