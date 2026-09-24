@@ -174,6 +174,62 @@ const TRANSLATIONS = {
             en: 'Ideator & Creator',
             it: 'Ideatore & Creatore'
         }
+    },
+
+    // Guided tutorial (runs right after calibration)
+    tutorial: {
+        skip: {
+            en: 'SKIP',
+            it: 'SALTA'
+        },
+        tiltTitle: {
+            en: 'Tilt to roll',
+            it: 'Inclina per muoverti'
+        },
+        tiltText: {
+            en: 'Gently tilt your phone and the box rolls that way. Small moves: it keeps its momentum. Roll around a bit.',
+            it: 'Inclina piano il telefono e la scatola rotola da quella parte. Movimenti piccoli: ha inerzia. Fai un giro.'
+        },
+        voidTitle: {
+            en: 'Mind the void',
+            it: 'Occhio al vuoto'
+        },
+        voidText: {
+            en: 'See the glowing edges? There are no walls. Roll past them and the box drops into space. Game over.',
+            it: 'Vedi i bordi luminosi? Non ci sono pareti. Se li superi la scatola cade nello spazio. Game over.'
+        },
+        coinTitle: {
+            en: 'Grab the coins',
+            it: 'Prendi le monete'
+        },
+        coinText: {
+            en: 'Roll into the gold coin to collect it. Every coin is a point, and points make the game harder.',
+            it: 'Passa sulla moneta d\'oro per prenderla. Ogni moneta è un punto, e i punti rendono il gioco più difficile.'
+        },
+        shoesTitle: {
+            en: 'Dodge Crazy Tracy',
+            it: 'Schiva Crazy Tracy'
+        },
+        shoesText: {
+            en: 'That lady is Crazy Tracy. She throws stilettos at you. Keep moving and dodge them: each hit costs a life.',
+            it: 'Lei è Crazy Tracy. Ti tira i tacchi a spillo. Continua a muoverti e schivali: ogni colpo costa una vita.'
+        },
+        shoesHit: {
+            en: 'Ouch! In the real game that costs a life. Keep moving!',
+            it: 'Ahia! Nel gioco vero ti costa una vita. Muoviti!'
+        },
+        fellText: {
+            en: 'That is the void. In the real game it is instant game over. Back you go.',
+            it: 'Quello è il vuoto. Nel gioco vero è game over immediato. Ti rimetto su.'
+        },
+        readyTitle: {
+            en: 'Ready. Go!',
+            it: 'Pronto. Via!'
+        },
+        readyText: {
+            en: 'Five lives, one box, zero walls. Good luck.',
+            it: 'Cinque vite, una scatola, zero pareti. Buona fortuna.'
+        }
     }
 };
 

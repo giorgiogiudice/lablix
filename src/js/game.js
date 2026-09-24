@@ -104,6 +104,7 @@ function onCalibrateClick() {
 }
 
 function onExitClick() {
+    if (typeof abortTutorial === 'function') abortTutorial();
     gameState.isPlaying = false;
     releaseWakeLock();
     exitFullscreen();
@@ -192,12 +193,18 @@ function startGame() {
     gameState.isPlaying = true;
     startStepLoop();
 
-    // Grace period: no shooting for 1.5s so player can orient
-    gameState.lastShotTime = performance.now() + 500;
-
-    // Enemy taunts immediately at game start
-    const startTaunt = getRandomTaunt('general_mockery');
-    showTaunt(startTaunt, true);
+    // Guided tutorial on the real board first; the real game (and Tracy's first taunt) starts when it ends
+    const beginRealGame = () => {
+        gameState.lastShotTime = performance.now() + 1500;
+        const startTaunt = getRandomTaunt('general_mockery');
+        showTaunt(startTaunt, true);
+    };
+    if (typeof startTutorial === 'function') {
+        startTutorial(beginRealGame);
+    } else {
+        gameState.lastShotTime = performance.now() + 500;
+        beginRealGame();
+    }
 
     animate();
 }
@@ -277,6 +284,7 @@ function animate() {
         updateStepSound();
         checkEnemyCollision(); // Check collision with enemy (solid wall)
         updateCoin();
+        if (typeof updateTutorial === 'function') updateTutorial();
         updateEnemy();
         checkEnemyShooting();
         updateProjectiles();

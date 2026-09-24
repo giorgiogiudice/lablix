@@ -62,6 +62,10 @@ function checkEdges() {
 }
 
 function onFallOff() {
+    if (typeof isTutorialActive === 'function' && isTutorialActive()) {
+        tutorialOnFall();
+        return;
+    }
     stopAllFx();
     playFall();
     gameState.isFalling = true;

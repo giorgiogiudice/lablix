@@ -23,6 +23,7 @@ const JS_FILES = [
     'projectile.js',
     'collision.js',
     'ui.js',
+    'tutorial.js',
     'game.js'
 ];
 

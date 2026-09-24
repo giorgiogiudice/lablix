@@ -238,6 +238,7 @@ function triggerTaunt(category) {
 // Check for taunt triggers based on game state
 function checkTauntTriggers() {
     if (!gameState.isPlaying || gameState.isFalling) return;
+    if (typeof isTutorialActive === 'function' && isTutorialActive()) return;
     if (!gameState.playerBox) return;
 
     const now = performance.now();

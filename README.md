@@ -25,9 +25,10 @@ The game runs entirely in the browser with no installs required — just open th
 
 - **Tilt your phone** to control the box — the physics simulate real momentum and inertia
 - **Collect coins** to increase your score and unlock harder difficulty tiers
-- **Dodge shoes** thrown by an angry woman who follows you around the platform
+- **Dodge shoes** thrown by Crazy Tracy, an angry woman who follows you around the platform
 - **Don't fall off the edge** — there are no walls, and falling means instant death
 - **5 lives** — each shoe hit costs one life, falling costs them all
+- **Guided tutorial** — right after calibration, a short interactive walkthrough (English and Italian) on the real board: tilt to roll, mind the void, grab a coin, dodge Crazy Tracy's shoes. Falls and hits are free while it runs, and it can be skipped at any time
 
 ## Features
 

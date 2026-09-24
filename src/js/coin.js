@@ -98,6 +98,8 @@ function collectCoin() {
 
     // Spawn new coin
     spawnCoinAtRandomPosition();
+
+    if (typeof isTutorialActive === 'function' && isTutorialActive()) tutorialOnCoin();
 }
 
 function createCoinParticles(x, z) {

@@ -887,3 +887,124 @@ html, body {
     margin-left: auto;
     font-weight: bold;
 }
+
+/* ========================
+   Guided Tutorial
+   ======================== */
+.tutorial-card {
+    position: absolute;
+    left: 50%;
+    bottom: calc(22px + env(safe-area-inset-bottom, 0px));
+    width: min(92vw, 420px);
+    transform: translate(-50%, 24px);
+    padding: 16px 18px 18px;
+    border-radius: 18px;
+    background: rgba(8, 10, 24, 0.86);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.55);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    color: #fff;
+    text-align: left;
+    z-index: 150;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.tutorial-card.visible {
+    opacity: 1;
+    transform: translate(-50%, 0);
+    pointer-events: auto;
+}
+
+.tutorial-card.shake {
+    animation: tutorialShake 0.45s ease;
+}
+
+@keyframes tutorialShake {
+    0%, 100% { transform: translate(-50%, 0); }
+    20% { transform: translate(calc(-50% - 8px), 0); }
+    40% { transform: translate(calc(-50% + 7px), 0); }
+    60% { transform: translate(calc(-50% - 5px), 0); }
+    80% { transform: translate(calc(-50% + 3px), 0); }
+}
+
+.tutorial-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.tutorial-step {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.tutorial-skip {
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: transparent;
+    color: rgba(255, 255, 255, 0.85);
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.14em;
+    padding: 8px 12px;
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+.tutorial-skip:active {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.tutorial-icon {
+    font-size: 30px;
+    line-height: 1;
+    margin: 2px 0 6px;
+}
+
+.tutorial-title {
+    margin: 0 0 6px;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+}
+
+.tutorial-text {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.45;
+    color: rgba(255, 255, 255, 0.86);
+}
+
+.tutorial-card[data-step="void"] .tutorial-title { color: #ffe066; }
+.tutorial-card[data-step="coin"] .tutorial-title { color: #ffd54a; }
+.tutorial-card[data-step="shoes"] .tutorial-title { color: #ff6b81; }
+.tutorial-card[data-step="ready"] .tutorial-title { color: #7bed9f; }
+
+.tutorial-progress {
+    margin-top: 12px;
+    height: 5px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.12);
+    overflow: hidden;
+}
+
+.tutorial-progress i {
+    display: block;
+    height: 100%;
+    width: 0;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #ffd54a, #ff6b81);
+    transition: width 0.2s linear;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tutorial-card, .tutorial-progress i { transition: none; }
+    .tutorial-card.shake { animation: none; }
+}

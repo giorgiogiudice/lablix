@@ -111,8 +111,10 @@ function onPlayerHit(projectile, projectileIndex) {
     gameState.lastHitTime = now;
     gameState.isHit = true;
 
-    // Reduce lives
-    gameState.lives--;
+    const inTutorial = typeof isTutorialActive === 'function' && isTutorialActive();
+
+    // Reduce lives (never during the tutorial)
+    if (!inTutorial) gameState.lives--;
     updateUI();
 
     // Calculate knockback direction (from projectile to player)
@@ -131,12 +133,16 @@ function onPlayerHit(projectile, projectileIndex) {
     triggerScreenShake();
     flashPlayerRed();
 
-    // Trigger taunt
-    triggerHitTaunt();
+    if (inTutorial) {
+        tutorialOnHit();
+    } else {
+        // Trigger taunt
+        triggerHitTaunt();
 
-    // Check for game over
-    if (gameState.lives <= 0) {
-        onShotDeath();
+        // Check for game over
+        if (gameState.lives <= 0) {
+            onShotDeath();
+        }
     }
 
     // Reset hit state after cooldown

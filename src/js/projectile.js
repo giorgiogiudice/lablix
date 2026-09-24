@@ -321,6 +321,16 @@ function checkEnemyShooting() {
     if (typeof canEnemyShoot === 'function' && !canEnemyShoot()) return;
 
     const now = performance.now();
+
+    if (typeof isTutorialActive === 'function' && isTutorialActive()) {
+        if (tutorialShouldShoot(now)) {
+            gameState.lastShotTime = now;
+            createProjectile();
+            playWosh();
+        }
+        return;
+    }
+
     const fireRate = getFireRateForTier();
 
     if (now - gameState.lastShotTime >= fireRate) {
