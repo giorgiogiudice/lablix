@@ -9,7 +9,7 @@ const TUTORIAL_TILT_DISTANCE = 5;      // world units the box must travel in ste
 const TUTORIAL_VOID_MS = 4500;         // how long the "void" step stays up
 const TUTORIAL_SHOES = 3;              // shoes Tracy throws in step 4
 const TUTORIAL_SHOE_INTERVAL = 2200;   // ms between tutorial shoes (slower than tier 1)
-const TUTORIAL_READY_MS = 4000;       // long enough to read the goal before the real game starts
+const TUTORIAL_COUNTDOWN = 5;         // seconds of 5-4-3-2-1 before the real game starts
 
 var tutorial = {
     active: false,
@@ -27,6 +27,11 @@ var tutorial = {
 
 function isTutorialActive() {
     return tutorial.active;
+}
+
+/** The tutorial runs once: after it is completed (or skipped) the game starts straight away. */
+function isTutorialDone() {
+    try { return localStorage.getItem('lablix_tutorial_done') === '1'; } catch (e) { return false; }
 }
 
 function _tutorialText(key) {
@@ -48,6 +53,7 @@ function _buildTutorialCard() {
         '<div class="tutorial-icon" aria-hidden="true"></div>' +
         '<h2 class="tutorial-title"></h2>' +
         '<p class="tutorial-text"></p>' +
+        '<div class="tutorial-count hidden" aria-hidden="true"></div>' +
         '<div class="tutorial-progress"><i></i></div>';
     el.querySelector('.tutorial-skip').addEventListener('click', function (e) {
         e.stopPropagation();
@@ -80,6 +86,7 @@ function _renderStep() {
         : '';
     el.querySelector('.tutorial-skip').textContent = _tutorialText('skip');
     el.querySelector('.tutorial-skip').classList.toggle('hidden', name === 'ready');
+    el.querySelector('.tutorial-count').classList.toggle('hidden', name !== 'ready');
     el.querySelector('.tutorial-icon').textContent = icons[name];
     el.querySelector('.tutorial-title').textContent = _tutorialText(name + 'Title');
     el.querySelector('.tutorial-text').textContent = _tutorialText(name + 'Text');
@@ -131,10 +138,19 @@ function _goToStep(i) {
     if (name === 'void') {
         tutorial.timer = setTimeout(function () { _goToStep(i + 1); }, TUTORIAL_VOID_MS);
     }
-    if (name === 'ready') {
-        tutorial.timer = setTimeout(finishTutorial, TUTORIAL_READY_MS);
-    }
     _renderStep();
+    if (name === 'ready') _countdown(TUTORIAL_COUNTDOWN);
+}
+
+function _countdown(n) {
+    if (!tutorial.active || !tutorial.el) return;
+    if (n <= 0) { finishTutorial(); return; }
+    var c = tutorial.el.querySelector('.tutorial-count');
+    c.textContent = n;
+    c.classList.remove('tick');
+    void c.offsetWidth;
+    c.classList.add('tick');
+    tutorial.timer = setTimeout(function () { _countdown(n - 1); }, 1000);
 }
 
 function startTutorial(onDone) {
@@ -199,7 +215,7 @@ function tutorialOnFall() {
     gameState.fallRotation.z = (Math.random() - 0.5) * 0.1;
     if (typeof clearAllProjectiles === 'function') clearAllProjectiles();
 
-    if (tutorial.el) {
+    if (tutorial.el && TUTORIAL_STEPS[tutorial.step] !== 'ready') {
         tutorial.el.querySelector('.tutorial-text').textContent = _tutorialText('fellText');
         tutorial.el.classList.remove('shake');
         void tutorial.el.offsetWidth;
@@ -210,8 +226,9 @@ function tutorialOnFall() {
         if (!tutorial.active) return;
         _respawnBox();
         // the shoes step restarts cleanly after a fall
-        if (TUTORIAL_STEPS[tutorial.step] === 'shoes') _goToStep(tutorial.step);
-        else _renderStep();
+        var step = TUTORIAL_STEPS[tutorial.step];
+        if (step === 'shoes') _goToStep(tutorial.step);
+        else if (step !== 'ready') _renderStep();
     }, 1400);
 }
 
@@ -238,7 +255,10 @@ function finishTutorial() {
     tutorial.active = false;
     tutorial.step = -1;
     _setEdgeWarning(false);
-    if (tutorial.el) tutorial.el.classList.remove('visible');
+    if (tutorial.el) {
+        tutorial.el.classList.remove('visible');
+        tutorial.el.dataset.step = '';
+    }
     try { localStorage.setItem('lablix_tutorial_done', '1'); } catch (e) {}
 
     // clean slate for the real game

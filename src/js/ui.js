@@ -10,7 +10,11 @@ function showScreen(name) {
     gameContainer.classList.add('hidden');
     document.getElementById('desktop-message').classList.add('hidden');
 
-    if (name === 'start') startScreen.classList.remove('hidden');
+    if (name === 'start') {
+        startScreen.classList.remove('hidden');
+        // back on the start screen: a good moment to pick up a new version
+        if (typeof applyWaitingUpdate === 'function') setTimeout(() => { checkForUpdate(false); applyWaitingUpdate(); }, 300);
+    }
     else if (name === 'calibration') calibrationScreen.classList.remove('hidden');
     else if (name === 'game') gameContainer.classList.remove('hidden');
 }

@@ -201,7 +201,7 @@ function startGame() {
         const startTaunt = getRandomTaunt('general_mockery');
         showTaunt(startTaunt, true);
     };
-    if (typeof startTutorial === 'function') {
+    if (typeof startTutorial === 'function' && !isTutorialDone()) {
         startTutorial(beginRealGame);
     } else {
         gameState.lastShotTime = performance.now() + 500;

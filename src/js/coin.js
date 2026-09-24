@@ -90,8 +90,11 @@ function updateCoin() {
 
 function collectCoin() {
     playCoin();
-    gameState.score++;
-    updateUI();
+    const inTutorial = typeof isTutorialActive === 'function' && isTutorialActive();
+    if (!inTutorial) {
+        gameState.score++;
+        updateUI();
+    }
 
     // Spawn particle effect
     createCoinParticles(currentCoin.position.x, currentCoin.position.z);
@@ -99,7 +102,7 @@ function collectCoin() {
     // Spawn new coin
     spawnCoinAtRandomPosition();
 
-    if (typeof isTutorialActive === 'function' && isTutorialActive()) tutorialOnCoin();
+    if (inTutorial) tutorialOnCoin();
 }
 
 function createCoinParticles(x, z) {

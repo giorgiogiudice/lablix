@@ -20,32 +20,56 @@ function showOfflineReady() {
     if (el) el.classList.remove('hidden');
 }
 
+let swRegistration = null;
+let swLastCheck = 0;
+const SW_CHECK_EVERY_MS = 10 * 60 * 1000;
+
+/** Ask the server for a newer version (cheap: sw.js is a few KB and never HTTP-cached). */
+function checkForUpdate(force) {
+    if (!swRegistration || navigator.onLine === false) return;
+    const now = Date.now();
+    if (!force && now - swLastCheck < 30000) return;
+    swLastCheck = now;
+    swRegistration.update().catch(() => {});
+}
+
+/** A downloaded update is swapped in only while idle on the start screen, never mid-game. */
+function applyWaitingUpdate() {
+    const reg = swRegistration;
+    if (!reg || !reg.waiting || !navigator.serviceWorker.controller) return;
+    if (gameState.isPlaying || gameState.currentScreen !== 'start') return;
+    sessionStorage.setItem('lablix_sw_update', '1');
+    reg.waiting.postMessage('skipWaiting');
+}
+
 function initServiceWorker() {
     if (!('serviceWorker' in navigator)) return;
     let reloading = false;
     navigator.serviceWorker.addEventListener('controllerchange', () => {
-        // A new version took over: reload only while idle on the start screen
+        // The new version took over: reload into it (only ever requested from the idle start screen)
         if (reloading || !sessionStorage.getItem('lablix_sw_update')) return;
         reloading = true;
         sessionStorage.removeItem('lablix_sw_update');
         location.reload();
     });
     window.addEventListener('load', () => {
-        navigator.serviceWorker.register('sw.js').then((reg) => {
-            const applyUpdate = () => {
-                if (reg.waiting && navigator.serviceWorker.controller && gameState.currentScreen === 'start' && !gameState.isPlaying) {
-                    sessionStorage.setItem('lablix_sw_update', '1');
-                    reg.waiting.postMessage('skipWaiting');
-                }
-            };
+        navigator.serviceWorker.register('sw.js', { updateViaCache: 'none' }).then((reg) => {
+            swRegistration = reg;
             reg.addEventListener('updatefound', () => {
                 const sw = reg.installing;
-                if (sw) sw.addEventListener('statechange', () => { if (sw.state === 'installed') applyUpdate(); });
+                if (sw) sw.addEventListener('statechange', () => { if (sw.state === 'installed') applyWaitingUpdate(); });
             });
-            applyUpdate();
+            applyWaitingUpdate();
+            checkForUpdate(true);
         }).catch(() => {});
         navigator.serviceWorker.ready.then(showOfflineReady).catch(() => {});
     });
+    // Installed apps are often resumed rather than reopened: check again whenever it comes back
+    document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible') { checkForUpdate(false); applyWaitingUpdate(); }
+    });
+    window.addEventListener('online', () => checkForUpdate(true));
+    setInterval(() => { if (document.visibilityState === 'visible') checkForUpdate(false); }, SW_CHECK_EVERY_MS);
 }
 
 function openInstallHelp() {

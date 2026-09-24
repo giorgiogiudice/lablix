@@ -1004,9 +1004,53 @@ html, body {
     transition: width 0.2s linear;
 }
 
+/* Final step: centered, with a 5-4-3-2-1 countdown */
+.tutorial-card[data-step="ready"] {
+    top: 50%;
+    bottom: auto;
+    width: min(88vw, 380px);
+    padding: 22px 22px 24px;
+    text-align: center;
+    transform: translate(-50%, -50%) scale(0.94);
+}
+
+.tutorial-card[data-step="ready"].visible {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.tutorial-card[data-step="ready"] .tutorial-top { display: none; }
+.tutorial-card[data-step="ready"] .tutorial-icon { font-size: 36px; margin-bottom: 8px; }
+.tutorial-card[data-step="ready"] .tutorial-title { font-size: 26px; }
+
+.tutorial-count {
+    margin: 14px auto 0;
+    width: 84px;
+    height: 84px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    border: 2px solid rgba(123, 237, 159, 0.55);
+    box-shadow: 0 0 30px rgba(123, 237, 159, 0.25), inset 0 0 20px rgba(123, 237, 159, 0.12);
+    font-size: 46px;
+    font-weight: 800;
+    line-height: 1;
+    color: #7bed9f;
+    font-variant-numeric: tabular-nums;
+}
+
+.tutorial-count.tick {
+    animation: tutorialTick 1s ease-out;
+}
+
+@keyframes tutorialTick {
+    0% { transform: scale(1.35); opacity: 0.2; }
+    25% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(0.96); opacity: 1; }
+}
+
 @media (prefers-reduced-motion: reduce) {
     .tutorial-card, .tutorial-progress i { transition: none; }
-    .tutorial-card.shake { animation: none; }
+    .tutorial-card.shake, .tutorial-count.tick { animation: none; }
 }
 
 
